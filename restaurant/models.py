@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+class AvailableTable(models.Model):
+    available_tables = models.IntegerField(default=1)
+    def __str__(self):
+        return f'{self.available_tables}'
 
 class Table(models.Model):
     
@@ -10,12 +14,13 @@ class Table(models.Model):
         
     ]
     category = models.CharField(max_length=7, choices=TABLE_CATEGORY)
+    tables_available = models.ForeignKey(AvailableTable, on_delete=models.CASCADE, related_name='tables_available')
     table_number = models.IntegerField()
  
 
 
     def __str__(self):
-        return f' Table number {self.table_number} for a {self.category}'
+        return f' Table number {self.table_number} for a {self.category} tables available {self.tables_available}'
 
 class Menu(models.Model):
     MENU_CATEGORY = [
