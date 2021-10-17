@@ -1,12 +1,21 @@
 
-from restaurant.models import Table, Booking
+from restaurant.models import Booking
 
-def check_availability(table, start_date, end_date):
+
+def check_availability(start_date, end_date):
     avail_list = []
-    reservation_list = Booking.objects.filter(table=table)
-    for reservation in reservation_list:
-        if reservation.start_date >= start_date and reservation.end_date <= end_date:
+    reservation_list = Booking.objects.filter()
+    for reservation in reservation_list:            
+        if reservation.start_date > start_date or reservation.end_date < end_date:
+          
             avail_list.append(True)
         else:
             avail_list.append(False)
-    return all(avail_list)     
+    return all(avail_list) 
+
+
+
+
+
+         
+    
