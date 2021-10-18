@@ -6,18 +6,6 @@ from django.views.generic import ListView, FormView, View
 from .models import Booking
 from .forms import BookingForm
 from restaurant.reservation_functions.availablity import check_availability
-# Create your views here.
-
-
-
-
-class BookingListView(ListView):
-    model = Booking
-    template = "booking_list.html"
-
-    def get_queryset(self, *args, **kwargs):
-        booking_list = Booking.objects.filter(user = self.request.user)
-        return booking_list
 
   
 class BookingFormView(View):
@@ -55,7 +43,62 @@ class BookingFormView(View):
 
             return redirect('restaurant:BookingListView')
         else:
-            return HttpResponse('form not valid', form.errors)    
+            return HttpResponse('form not valid', form.errors)  
 
 
+class BookingListView(ListView):
+    model = Booking
+    template = "booking_list.html"
 
+    def get_queryset(self, *args, **kwargs):
+        if self.request.user.is_staff:
+            booking_list = Booking.objects.all()
+            return booking_list
+        else:
+            booking_list = Booking.objects.filter(user = self.request.user)
+            return booking_list              
+
+
+class BookingDetailView(View):
+    def get(self, request, *args, **kwargs):
+        user = self.request.user
+        print(user)
+        form = BookingForm()
+        return render(request, 'booking_detail_view.html', {'form': form})   
+
+
+    def post(self, request, *args, **kwargs):
+        user = self.request.user
+        print(user)
+        form = BookingForm()
+        if form.is_valid():
+            data =form.cleaned_data 
+            # user = data['user']
+            # start_date = data['start_date'].strftime("%Y-%m-%dT%H:%M")
+            # end_date = data['end_date'].strftime("%Y-%m-%dT%H:%M")
+            # number_of_customers = data['number_of_customers']
+            # menu = data['menu']
+            # phone_number = data['phone_number']
+
+
+            def check_duplicates(user, start_date, end_date):
+                for booking in bookings:
+                    if booking.start_date != form.start_date and booking.end_date !=form.end_date and booking.user != form.user:
+
+                        booking = Booking.objects.create(
+                            user=self.request.user,
+                            start_date=data['start_date'].strftime("%Y-%m-%dT%H:%M"),
+                            end_date=data['end_date'].strftime("%Y-%m-%dT%H:%M"),
+                            number_of_customers=data['number_of_customers'],
+                            menu=data['menu'],
+                            phone_number=data['phone_number'],             
+                            )
+                        booking.save()
+                        message = Mail(
+                            from_email=renatalantos@gmail.com,
+                            to_emails=request.user.email,
+                            )
+
+                        return HttpResponse(booking)
+                    else:
+                        return HttpResponse('You have made this booking already!')        
