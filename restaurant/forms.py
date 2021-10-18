@@ -4,8 +4,7 @@ from django import forms
 
 class BookingForm(forms.Form):
       
-    
-    customer = forms.CharField(required=True)
+    user = forms.CharField(required=True)
     phone_number = forms.CharField(required=True)
     start_date = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", ])
     end_date = forms.DateTimeField(required=True, input_formats=["%Y-%m-%dT%H:%M", ])
