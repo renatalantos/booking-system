@@ -2,7 +2,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import HttpResponse
 from django.views import generic
-
 from django.views.generic import ListView, FormView, View
 from .models import Booking
 from .forms import BookingForm
@@ -57,45 +56,6 @@ class BookingFormView(View):
             return redirect('restaurant:BookingListView')
         else:
             return HttpResponse('form not valid', form.errors)    
-
-
-
-    # def get(self, request, slug, *args, **kwargs):
-    #     data =form.cleaned_data
-    #     queryset = Booking.objects.filter(user=user)
-    #     booking = get_object_or_404(queryset)
-
-    #     return render(request, 'booking_form.html',
-    #     )
-
- 
-
-
-
-
-
-
-    # def form_valid(self, form):
-    #     data =form.cleaned_data
-    #     user = Booking.objects.filter(user=data['user'])
-        
-    #     def check_availability(user, start_date, data['end_date']):
-    #             available_tables.append(table)
-
-    #     if len(available_tables)>0:        
-    #         table = available_tables[0]
-    #         booking = Booking.objects.create(
-    #             user=self.request.user,
-    #             phone_number=data['phone_number'],
-    #             start_date=data['start_date'],
-    #             end_date=data['end_date'],
-    #             number_of_customers=data['number_of_customers'],
-    #             menu=data['menu'],
-    #         )
-    #         booking.save()
-    #         return HttpResponse(booking)
-    #     else:
-    #         return HttpResponse('All these tables are booked out!')        
 
 
 
