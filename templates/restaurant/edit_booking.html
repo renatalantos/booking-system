@@ -7,11 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit">Book a table</button>
+    <h1>Edit booking</h1>
+    <form method="POST">
+       
+        {% csrf_token%}
+        {{form.as_p}}
+        
+
+        <div>
+            <p>
+                <button type="submit">Edit booking</button>
+            </p>
+        </div>
     </form>
     
+</body>
 </body>
 </html>

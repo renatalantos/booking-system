@@ -5,7 +5,8 @@ from django.contrib.auth.models import User
 
 class Booking(models.Model):
     
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='customer')
+    user = models.CharField(max_length=15)
+    customer = models.CharField(max_length=15, default=1)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     number_of_customers = models.IntegerField(default=1)
@@ -21,5 +22,5 @@ class Booking(models.Model):
 
 
     def __str__(self):
-        return f' Customer {self.user} has made a booking for {self.number_of_customers} customers between {self.start_date} and {self.end_date} with menu {self.menu}'
+        return f' Customer {self.customer} has made a booking for {self.number_of_customers} customers between {self.start_date} and {self.end_date} with menu {self.menu}'
 

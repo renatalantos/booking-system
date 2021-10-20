@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from restaurant.views import get_booking_form, add_booking, view_booking, edit_booking, delete_booking
+from restaurant import views
+
+
+APP_NAME = "restaurant"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('restaurant.urls')),
+    path('', views.get_booking_form, name='book'),
+    path('add_booking/', views.add_booking, name='add_booking'),
+    path('view_booking/', views.view_booking, name='view_booking'),
+    path('edit/<restaurant_id>', views.edit_booking, name='edit'),
+    path('delete_booking/', views.delete_booking, name='delete_booking'),
 ]

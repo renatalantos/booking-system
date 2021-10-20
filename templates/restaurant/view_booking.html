@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Booking</title>
+</head>
+<body>
+    <h1>View booking</h1>
+    <table>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.customer }}</td>
+            <td>{{ booking.user }}</td>
+            <td>{{ booking.start_date }}</td>
+            <td>{{ booking.end_date }}</td>
+            <td>{{ booking.phone_number }}</td>
+            <td>{{ booking.number_of_customers }}</td>
+            <td>{{ booking.menu }}</td>
+        </tr>
+        {% endfor %}
+        {% csrf_token %}
+    </table>
+    <a href="/edit/{{ restaurant.id }}"><button>Edit</button></a>
+</body>
+</html>
+    
+</body>
+</html>
