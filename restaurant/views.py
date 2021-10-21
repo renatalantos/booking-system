@@ -6,14 +6,6 @@ from .models import Booking
 from .forms import BookingForm
 
 
-# def get_booking_form(request):
-#     bookings = Booking.objects.all()
-#     context = {
-#         'bookings': bookings
-#     }
-#     return render(request, 'restaurant/booking_form.html', context)
-
-
 
 def add_booking(request):
     if request.method=='POST':
@@ -26,7 +18,7 @@ def add_booking(request):
     context= {
         'form': form
         }    
-    return render(request, 'restaurant/add_booking.html', context)
+    return render(request, 'restaurant/index.html', context)
 
 
 

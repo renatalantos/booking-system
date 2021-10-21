@@ -19,6 +19,8 @@ class Booking(models.Model):
         ('Vegan', 'Vegan'),
     ]
     menu = models.CharField(max_length=13, choices=MENU_CATEGORY)
+    # class Meta:
+    #     unique_together = ("customer", "start_date", "end_date", "number_of_customers", "menu")
 
 
     def __str__(self):

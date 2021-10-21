@@ -23,9 +23,5 @@ APP_NAME = "restaurant"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   # path('', views.get_booking_form, name='book'),
-    path('add_booking/', views.add_booking, name='add_booking'),
-    path('view_booking/', views.view_booking, name='view_booking'),
-    path('edit/<booking_id>', views.edit_booking, name='edit'),
-    path('delete/<booking_id>', views.delete_booking, name='delete_booking'),
+    path('', include('restaurant.urls'), name='restaurant_urls'),
 ]

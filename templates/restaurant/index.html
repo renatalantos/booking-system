@@ -11,7 +11,7 @@
 <body>
 
     
-    <form method="POST" action="{% url 'add_booking' %}">
+    <form method="POST" action="{% url 'home' %}">
        
         {% csrf_token%}
         {{form.as_p}}
