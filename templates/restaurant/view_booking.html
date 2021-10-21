@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>View booking</h1>
+
+    
     <table>
         {% for booking in bookings %}
         <tr>
@@ -18,11 +20,25 @@
             <td>{{ booking.phone_number }}</td>
             <td>{{ booking.number_of_customers }}</td>
             <td>{{ booking.menu }}</td>
+            <td>
+                <a href = "/edit/{{ booking.id }}">
+                    <button>Edit Booking
+
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a href = "/delete/{{ booking.id }}">
+                    <button>Delete Booking
+
+                    </button>
+                </a>
+            </td>
         </tr>
         {% endfor %}
         {% csrf_token %}
     </table>
-    <a href="/edit/{{ restaurant.id }}"><button>Edit</button></a>
+    
 </body>
 </html>
     
