@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'restaurant',
+    'bootstrap4',
+    
 ]
 
 SITE_ID = 1

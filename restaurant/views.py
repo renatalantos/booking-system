@@ -6,6 +6,8 @@ from .models import Booking
 from .forms import BookingForm
 
 
+def view_home(request):
+    return render(request, 'restaurant/index.html')
 
 def add_booking(request):
     if request.method=='POST':
@@ -18,7 +20,7 @@ def add_booking(request):
     context= {
         'form': form
         }    
-    return render(request, 'restaurant/index.html', context)
+    return render(request, 'restaurant/add_booking.html', context)
 
 
 

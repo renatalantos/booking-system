@@ -13,10 +13,10 @@
     <table>
         {% for booking in bookings %}
         <tr>
-            <td>{{ booking.customer }}</td>
+            <td>{{ booking.customer_name }}</td>
             <td>{{ booking.user }}</td>
-            <td>{{ booking.start_date }}</td>
-            <td>{{ booking.end_date }}</td>
+            <td>{{ booking.reservation_date }}</td>
+            
             <td>{{ booking.phone_number }}</td>
             <td>{{ booking.number_of_customers }}</td>
             <td>{{ booking.menu }}</td>
