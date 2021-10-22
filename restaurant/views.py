@@ -6,6 +6,7 @@ from .models import Booking
 from .forms import BookingForm
 
 
+
 def view_home(request):
     return render(request, 'restaurant/index.html')
 
@@ -52,3 +53,5 @@ def delete_booking(request, booking_id):
     booking.delete()
     return redirect('view_booking')    
     
+def contact(request):
+    return render(request, 'restaurant/contact.html')    
