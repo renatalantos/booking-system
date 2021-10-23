@@ -1,30 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Booking</title>
-</head>
 
-<body>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro-booking.jpg' %}"
+                alt="Restaurant" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Table Booking Form</span>
 
-    <a class="nav-link" href="{% url 'home' %}">Home</a>
-    <form method="POST" action="{% url 'add_booking' %}">
-       
-        {% csrf_token%}
-        {{form.as_p}}
-        
 
-        <div>
-            <p>
-                <button type="submit">Submit</button>
-            </p>
+                </h2>
+                <div class="row">
+                    <div class="col-md-8 mt-3 offset-md-2">
+                        <form method="POST" action="{% url 'add_booking' %}">
+
+                            {% csrf_token%}
+                            {{form.as_p}}
+                            
+                                <p>
+                                    <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                                            type="submit">Submit Booking</button></div>
+
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
-    
-</body>
+    </div>
+</section>
 
-</html>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block script %}
+{% endblock %}

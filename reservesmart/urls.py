@@ -24,4 +24,5 @@ APP_NAME = "restaurant"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('restaurant.urls'), name='restaurant_urls'),
+    path('accounts/', include('allauth.urls')),
 ]

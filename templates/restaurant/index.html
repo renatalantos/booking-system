@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% csrf_token %}
 
 
 
@@ -17,7 +18,7 @@
                 <p class="mb-3">Every plate of our quality artisan food starts with locally sourced, hand picked
                     ingredients. Once you try it, our food will be a blissful addition to your weekly routine! We cater
                     for vegetarian and vegan customers!</p>
-                <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a></div>
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{% url 'contact' %}">Visit Us Today!</a></div>
             </div>
         </div>
     </div>
