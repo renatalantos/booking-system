@@ -1,61 +1,157 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{%block title %}
+<title>Menu page</title>
+{% endblock %}
 
 
 
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro.jpg' %}" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Fresh Food</span>
-                            <span class="section-heading-lower">Worth Eating</span>
-                        </h2>
-                        <p class="mb-3">Every plate of our quality artisan food starts with locally sourced, hand picked ingredients. Once you try it, our  will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a></div>
-                    </div>
-                </div>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu2.jpg' %}"
+                alt="Plate with sausages and eggs" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Hamburger Plate with Chips</span>
+                    <span class="section-heading-upper">8,00 €</span>
+
+
+                </h2>
+                <p class="mb-3">Our menu features burgers that are hand crafted with 100% Angus beef. Always fresh,
+                    never frozen. We use fresh, natural and delicious ingredients. Made to order and served medium, on
+                    toasty, classic style buns.</p>
+                <!--Burger Joint-->
             </div>
-        </section>
-        
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro.jpg' %}" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Fresh Food</span>
-                            <span class="section-heading-lower">Worth Eating</span>
-                        </h2>
-                        <p class="mb-3">Every plate of our quality artisan food starts with locally sourced, hand picked ingredients. Once you try it, our  will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a></div>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu1.jpg' %}"
+                alt="Hamburger with chips" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Artisan Irish Breakfast</span>
+                    <span class="section-heading-upper">10,00 €</span>
+                </h2>
+                <p class="mb-3">Made of dry cured back bacon rashers, our own home-made pork sausages,
+                    black and white pudding, grilled fresh tomatos, mushrooms, potatos, avocados, beans and eggs.
+                    Served with home-made brown bread and hot toast.</p>
+
             </div>
-        </section>
-        
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro.jpg' %}" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Fresh Food</span>
-                            <span class="section-heading-lower">Worth Eating</span>
-                        </h2>
-                        <p class="mb-3">Every plate of our quality artisan food starts with locally sourced, hand picked ingredients. Once you try it, our  will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a></div>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu3.jpg' %}"
+                alt="Roast chicken" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Roast Chicken</span>
+                    <span class="section-heading-upper">9,00 €</span>
+
+                </h2>
+                <p class="mb-3">This Peruvian-style grilled chicken is a recipe from the awesome Pio Pio restaurant in
+                    NYC.
+                    Butterflied chicken with a vinegar and spice rub gets slow-cooked on the
+                    grill, then quickly cooked directly over the coals to crisp the skin. It comes out tender and juicy,
+                    and is served with a simple spicy and creamy sauce made with jalapeños and ají amarillo
+                    peppers.</p>
+
             </div>
-        </section>
-        
-        {% endblock %}
-        {% block footer %}
-        {% endblock %}
-        {% block script %}
-        {% endblock %}
-    </body>
-</html>
+        </div>
+    </div>
+</section>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu4.jpg' %}"
+                alt="Vegan food" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Vegan Plate</span>
+                    <span class="section-heading-upper">10,00 €</span>
+
+                </h2>
+                <p class="mb-3">
+                    Our ingredients are fresh and sourced locally.
+                    Try our vegan dishes that are made to order and are always served
+                    with home-made brown bread.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu5.jpg' %}"
+                alt="Vegetarian food" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Vegetarian Plate</span>
+                    <span class="section-heading-upper">10,00 €</span>
+
+                </h2>
+                <p class="mb-3">Our ingredients are fresh and sourced locally.
+                    Try our vegetarian dishes that are made to order and are always served
+                    with home-made brown bread.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu6.jpg' %}"
+                alt="Beer" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Handcraft Beers</span>
+                    <span class="section-heading-upper">4,00 €</span>
+
+                </h2>
+                <p class="mb-3">
+                    The same ethos applies to Beers From Heaven, our partner to supply the freshest Irish craft beers
+                    and a hand-picked collection of classics. With a focus on quality produce, service and
+                    sustainability,
+                    we want to provide our customers with the best possible beer tasting experience. The beers have been
+                    selected to match all dishes on our menu.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/menu7.jpg' %}"
+                alt="Wine" />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Mediterranean Wines</span>
+                    <span class="section-heading-upper">9,00 €</span>
+
+                </h2>
+                <p class="mb-3">
+                    The same ethos applies to Wines From Heaven, our partner to supply the best mediterranean wines
+                    and a hand-picked collection of classics. With a focus on quality produce, service and
+                    sustainability,
+                    we want to provide our customers with the best possible wine tasting experience. The wines have been
+                    selected to match all dishes on our menu.
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block script %}
+{% endblock %}
