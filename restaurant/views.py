@@ -10,6 +10,9 @@ from .forms import BookingForm
 def view_home(request):
     return render(request, 'restaurant/index.html')
 
+def view_menu(request):
+    return render(request, 'restaurant/menu.html')
+
 def add_booking(request):
     if request.method=='POST':
         form=BookingForm(request.POST)
