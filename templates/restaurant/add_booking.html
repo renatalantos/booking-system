@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!--{% load crispy_forms_tags %}-->
 
 
 
@@ -17,22 +18,66 @@
                 </h2>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        <form method="POST" action="{% url 'add_booking' %}">
+                        {% if user.is_authenticated %}
+                        <!-- Logged in as <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">{{user.username}}</span>
 
-                            {% csrf_token%}
-                            {{form.as_p}}
+
+                        </h2>-->
+
+                        <form method="POST" action="{% url 'add_booking' %}" name="form">
+
                             
-                                <p>
-                                    <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-                                            type="submit">Submit Booking</button></div>
+                           
 
-                                </p>
+
+                          <div id="div_id_customer_name" class="form-group"> <label for="id_customer_name"
+                                    class=" requiredField">
+                                    Customer name<span class="asteriskField">*</span> </label>
+                                <div class=""> <input type="text" name="customer_name" maxlength="15"
+                                        class="textinput textInput form-control" required id="id_customer_name"> </div>
                             </div>
-                        </form>
+                            <div id="div_id_phone_number" class="form-group"> <label for="id_phone_number"
+                                    class=" requiredField">
+                                    Phone number<span class="asteriskField">*</span> </label>
+                                <div class=""> <input type="tel" name="phone_number" maxlength="15"
+                                        class="textinput textInput form-control" required id="id_phone_number"> </div>
+                            </div>
+                            <div id="div_id_booking_date" class="form-group"> <label
+                                    for="id_booking_date" class=" requiredField">
+                                    Reservation date and time
+                                    <span class="asteriskField">*</span></label>
+                                <div class=""> <input type="datetime-local" name="booking_date"
+                                        class="datetimeinput form-control" id="id_booking_date" required> </div>
+                            </div>
+                            <div id="div_id_number_of_guests" class="form-group"> <label for="id_number_of_guests"
+                                    class=" requiredField">
+                                    Number of customers<span class="asteriskField">*</span> </label>
+                                <div class=""> <input type="number" name="number_of_guests"
+                                        class="numberinput form-control" required id="id_number_of_guests"> </div>
+                            </div>
+                        
+                          <!-- {{ form | crispy }} -->
+                  
+                            {% csrf_token %}
+
+
+
+                        
+
+
+                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                                    type="submit">Submit Booking</button></div>
+
+
                     </div>
+                    </form>
+
+                    {% endif %}
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 

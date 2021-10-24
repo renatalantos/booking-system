@@ -5,6 +5,7 @@ from django.utils import timezone
 
 
 
+
 class Booking(models.Model):
     
     user = models.CharField(max_length=15)
@@ -17,6 +18,8 @@ class Booking(models.Model):
     reservation_date_and_time = models.DateTimeField(null=True, blank=True, validators=[validate_date])
     number_of_customers = models.IntegerField(null=True)
     phone_number = models.CharField(max_length=15)
+    
+    
     
     
     class Meta:
