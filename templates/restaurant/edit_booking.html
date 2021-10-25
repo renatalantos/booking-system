@@ -1,26 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Edit booking</h1>
-    <form method="POST">
-       
-        {% csrf_token%}
-        {{form.as_p}}
-        
-
-        <div>
-            <p>
-                <button type="submit">Edit booking</button>
-            </p>
-        </div>
-    </form>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
     
-</body>
-</body>
-</html>
+  
+
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/writing.jpg' %}"
+                    alt="Restaurant" />
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Edit your booking</span>
+    
+    
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-8 mt-3 offset-md-2">
+                            {% if user.is_authenticated %}
+                            <!-- Logged in as <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">{{user.username}}</span>
+    
+    
+                            </h2>-->
+    
+                            <form method="POST" name="form">
+    
+                                {{form|crispy}}
+                                
+                                 
+                                 {% csrf_token %}
+    
+    
+                                <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                                        type="submit">Edit booking</button></div>
+    
+    
+                        </div>
+                        </form>
+    
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+
+

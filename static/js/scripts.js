@@ -9,7 +9,12 @@ window.addEventListener('DOMContentLoaded', event => {
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
-  });
+function deferDateTimePicker_id_reservation_date_and_time() {
+    if (window.jQuery && $.fn.datetimepicker) {
+        $('#id_reservation_date_and_time').datetimepicker({"format": "L", "icons": {"time": "fa fa-clock-o"}, "locale": "en-us"});
+    } else {
+        setTimeout(function() { deferDateTimePicker_id_reservation_date_and_time() }, 50);
+    }
+}
+
+deferDateTimePicker_id_reservation_date_and_time();

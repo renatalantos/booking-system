@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'tempus_dominus',
     'cloudinary',
     'crispy_forms',
     'bootstrap4',
@@ -58,6 +59,7 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+TEMPUS_DOMINUS_LOCALIZE = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,17 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Booking</title>
-</head>
-<body>
-    <h1>View booking</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
 
-    <a class="nav-link" href="{% url 'home' %}">Home</a>
-    
-    <table>
+
+<table class="table table-hover table-dark">
+
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Customer name</th>
+            <th scope="col">User</th>
+            <th scope="col">Reservation date and time</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Number of guests</th>
+            <th scope="col">Edit booking</th>
+            <th scope="col">Delete booking</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <th scope="col"></th>
+        <th scope="col">{{ booking.customer_name }}</th>
+        <th scope="col">{{ booking.user }}</th>
+        <th scope="col">{{ booking.reservation_date_and_time }}</th>
+        <th scope="col">{{ booking.phone_number }}</th>
+        <th scope="col">{{ booking.number_of_customers}}</th>
+        <th scope="col">
+            
+
+            <div class="intro-button mx-auto"><a href="/edit/{{ booking.id }}"><button class="btn btn-primary btn-xl">Edit Booking</button></a></div>
+
+        </th>
+        <th scope="col">
+        
+            <div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}"><button class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a></div>
+
+        </th>
+    </tbody>
+    {% endfor %}
+    {% csrf_token %}
+</table>
+
+<!--<table table-bordered table-dark>
         {% for booking in bookings %}
         <tr>
             <td>{{ booking.customer_name }}</td>
@@ -38,10 +69,10 @@
         </tr>
         {% endfor %}
         {% csrf_token %}
-    </table>
-    
-</body>
-</html>
-    
-</body>
-</html>
+    </table>-->
+
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block script %}
+{% endblock %}
