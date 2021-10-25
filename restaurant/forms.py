@@ -16,8 +16,8 @@ class BookingForm(forms.ModelForm): #changed from forms.ModelForm
     def __init__(self, *args, **kwargs):
 
         
-            super().__init__(*args, **kwargs)
-            self.fields['reservation_date_and_time'].widget.attrs['class'] = 'form-control datetimepicker-input'
-            self.fields['reservation_date_and_time'].widget = DateTimePicker()
-            
+        super().__init__(*args, **kwargs)
+        self.fields['reservation_date_and_time'].widget.attrs['class'] = 'form-control datetimepicker-input'
+        self.fields['reservation_date_and_time'].widget = DateTimePicker()
+        
             
