@@ -22,6 +22,7 @@ class Booking(models.Model):
     class Meta:
 
         unique_together = ('user', 'customer_name', 'reservation_date_and_time')
+        
 
 
     def __str__(self):

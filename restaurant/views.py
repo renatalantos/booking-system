@@ -11,6 +11,7 @@ def view_menu(request):
     return render(request, 'restaurant/menu.html')
 
 def add_booking(request):
+   
     if request.method=='POST':
         form=BookingForm(request.POST)
         if form.is_valid():
@@ -24,6 +25,7 @@ def add_booking(request):
     return render(request, 'restaurant/add_booking.html', context)
 
 def view_booking(request):
+    
     bookings = Booking.objects.all()
     context= {
         'bookings': bookings
