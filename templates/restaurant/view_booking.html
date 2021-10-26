@@ -43,34 +43,6 @@
     {% csrf_token %}
 </table>
 
-<!--<table table-bordered table-dark>
-        {% for booking in bookings %}
-        <tr>
-            <td>{{ booking.customer_name }}</td>
-            <td>{{ booking.user }}</td>
-            <td>{{ booking.reservation_date_and_time }}</td>
-            
-            <td>{{ booking.phone_number }}</td>
-            <td>{{ booking.number_of_customers }}</td>
-        
-            <td>
-                <a href = "/edit/{{ booking.id }}">
-                    <button>Edit Booking
-
-                    </button>
-                </a>
-            </td>
-            <td>
-                <a href = "/delete/{{ booking.id }}">
-                    <button>Delete Booking
-
-                    </button>
-                </a>
-            </td>
-        </tr>
-        {% endfor %}
-        {% csrf_token %}
-    </table>-->
 
 {% endblock %}
 {% block footer %}

@@ -10,7 +10,7 @@ class Booking(models.Model):
     
     user = models.CharField(max_length=15)
     customer_name = models.CharField(max_length=15, null=True)
-    reservation_date_and_time = models.DateTimeField()
+    reservation_date_and_time = models.DateTimeField(null=True)
     def validate_date(reservation_date_and_time):
         if reservation_date_and_time < timezone.now():
             print('Date cannot be in the past!')
