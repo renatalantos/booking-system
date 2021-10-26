@@ -5,7 +5,7 @@ from django.forms import DateTimeInput
 from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
 
 
-class BookingForm(forms.ModelForm): #changed from forms.ModelForm
+class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking

@@ -1,12 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
-
-
-
-
-
-
-
 from .forms import BookingForm
 
 
@@ -29,8 +22,6 @@ def add_booking(request):
         'form': form
         }    
     return render(request, 'restaurant/add_booking.html', context)
-
-
 
 def view_booking(request):
     bookings = Booking.objects.all()
@@ -61,4 +52,4 @@ def delete_booking(request, booking_id):
     return redirect('view_booking')    
     
 def contact(request):
-    return render(request, 'restaurant/contact.html')    
+    return render(request, 'restaurant/contact.html')

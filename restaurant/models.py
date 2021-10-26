@@ -19,13 +19,10 @@ class Booking(models.Model):
     number_of_customers = models.IntegerField(null=True)
     phone_number = models.CharField(max_length=15)
     
-    
-    
-    
     class Meta:
-        unique_together = ("user", "customer_name", "reservation_date_and_time", "number_of_customers", "phone_number")
+
+        unique_together = ('user', 'customer_name', 'reservation_date_and_time')
 
 
     def __str__(self):
         return f' Customer {self.customer_name} has made a booking for {self.number_of_customers} customers for {self.reservation_date_and_time}.'
-
