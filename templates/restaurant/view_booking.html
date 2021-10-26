@@ -10,7 +10,8 @@
         <tr>
             <th scope="col"></th>
             <th scope="col">Customer name</th>
-            <th scope="col">User</th>
+            <th scope="col">User by Admin</th>
+            <th scope="col">Logged in User</th>
             <th scope="col">Reservation date and time</th>
             <th scope="col">Phone number</th>
             <th scope="col">Number of guests</th>
@@ -24,7 +25,8 @@
         
         <th scope="col"></th>
         <th scope="col">{{ booking.customer_name }}</th>
-        <!--<th scope="col">{{ user.username }}</th>-->
+        <th scope="col">{{ booking.user }}</th>
+        <th scope="col">{{ user.username }}</th>
         <th scope="col">{{ booking.reservation_date_and_time }}</th>
         <th scope="col">{{ booking.phone_number }}</th>
         <th scope="col">{{ booking.number_of_customers}}</th>
