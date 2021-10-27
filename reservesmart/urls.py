@@ -26,3 +26,6 @@ urlpatterns = [
     path('', include('restaurant.urls'), name='restaurant_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'restaurant.views.handler404'
+handler500 = 'restaurant.views.handler500'
