@@ -17,20 +17,16 @@
 
 
                 </h2>
-                <p>
-                    Please make sure the booking date is not in the past.
-                </p>
+                
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
                       {% if user.is_authenticated %}
-                        <!--Logged in as <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">{{user.username}}</span>
-
-
-                        </h2>-->
-
+                        
+                        <p>
+                            Please make sure the booking date is not in the past.
+                        </p>
                         <form method="POST" action="{% url 'add_booking' %}" name="form">
-                            
+                          
                             {{ form|crispy }}
                             
                              

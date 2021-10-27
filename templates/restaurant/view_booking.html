@@ -21,7 +21,7 @@
     </thead>
     <tbody>
         
-        {% for booking in bookings %}
+        {% for booking in bookings|dictsort:'customer_name' %}
             
                 <th scope="col"></th>
                 <th scope="col">{{ booking.customer_name }}</th>
@@ -45,17 +45,6 @@
   
     {% csrf_token %}
 </table>
-
-<form   name="form">
-                            
-    {{ form|crispy }}
-    
-     
-     {% csrf_token %}
-
-
-    <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-            type="submit">BLALALA</button></div>
 
 
 </div>
