@@ -28,7 +28,7 @@
 
                         <form method="POST" action="{% url 'add_booking' %}" name="form">
                             
-                            {{form|crispy}}
+                            {{ form|crispy }}
                             
                              
                              {% csrf_token %}
