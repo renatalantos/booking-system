@@ -20,16 +20,18 @@
         </tr>
     </thead>
     <tbody>
-        {% for booking in bookings|dictsort:"customer_name" %}
-
-        <th scope="col"></th>
-        <th scope="col">{{ booking.customer_name }}</th>
-        <th scope="col">{{ booking.user }}</th>
-        <th scope="col">{{ user.username }}</th>
-        <th scope="col">{{ booking.reservation_date_and_time }}</th>
-        <th scope="col">{{ booking.phone_number }}</th>
-        <th scope="col">{{ booking.number_of_customers}}</th>
-        <th scope="col">
+        
+        {% for booking in bookings %}
+            
+                <th scope="col"></th>
+                <th scope="col">{{ booking.customer_name }}</th>
+                <th scope="col">{{ booking.user }}</th>
+                <th scope="col">{{ user.username }}</th>
+                <th scope="col">{{ booking.reservation_date_and_time }}</th>
+                <th scope="col">{{ booking.phone_number }}</th>
+                <th scope="col">{{ booking.number_of_customers}}</th>
+                <th scope="col">
+            
             <div class="intro-button mx-auto"><a href="/edit/{{ booking.id }}"><button
                         class="btn btn-primary btn-xl">Edit Booking</button></a></div>
         </th>
@@ -40,13 +42,23 @@
         </th>
     </tbody>
     {% endfor %}
+  
     {% csrf_token %}
 </table>
 
+<form   name="form">
+                            
+    {{ form|crispy }}
+    
+     
+     {% csrf_token %}
 
+
+    <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+            type="submit">BLALALA</button></div>
+
+
+</div>
+</form>
 
 {% endblock content %}
-{% block footer %}
-{% endblock footer %}
-{% block script %}
-{% endblock script %}

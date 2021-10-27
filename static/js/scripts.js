@@ -27,3 +27,8 @@ function deferDateTimePicker_id_reservation_date_and_time() {
 
 deferDateTimePicker_id_reservation_date_and_time();
 
+setTimeout(function () {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+}, 2000);

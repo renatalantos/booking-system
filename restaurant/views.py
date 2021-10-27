@@ -35,6 +35,8 @@ def view_booking(request):
     return render(request, 'restaurant/view_booking.html', context)
 
 
+
+
 def edit_booking(request, booking_id):
     book = get_object_or_404(Booking, id=booking_id)
     if request.method == "POST":
