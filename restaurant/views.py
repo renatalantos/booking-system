@@ -76,7 +76,7 @@ def view_booking(request):
     Function enables user to view a booking after
     it has been made and added to the database.
     """
-    bookings = Booking.objects.all()
+    bookings = Booking.objects.all()[:1]
     context = {
         'bookings': bookings
     }
@@ -112,10 +112,21 @@ def delete_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if booking.delete():
             messages.success(request, 'Your booking has been deleted.')
-            return redirect('view_booking')
+            return redirect('no_booking_after_delete')
 
     form = BookingForm(instance=booking)
     context = {
         'form': form
     }
     return render(request, 'restaurant/delete_booking.html', context)
+
+def no_booking_after_delete(request):
+    """
+    Function ensures user is redirected to
+    empty booking table after deletion.
+    """
+    bookings = Booking.objects.all()[:0]
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'restaurant/view_booking.html', context)

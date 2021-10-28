@@ -22,7 +22,8 @@ class Booking(models.Model):
     reservation_date_and_time = models.DateTimeField(null=True, blank=True, validators=[validate_date])
     number_of_customers = models.IntegerField(null=True)
     phone_number = models.CharField(max_length=15, null=True)
-
+    created_on = models.DateTimeField(auto_now_add=True)
+    
     class Meta:
         """
         Class container with metadata
@@ -30,7 +31,7 @@ class Booking(models.Model):
         """
         unique_together = ('user', 'customer_name',
                            'reservation_date_and_time')
-        ordering = ["-reservation_date_and_time"]
+        ordering = ["-created_on"]
 
     def __str__(self):
         """
