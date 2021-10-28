@@ -8,6 +8,13 @@ class BookingAdmin(ModelAdmin):
     """
     Class registered to represent model in admin database.
     """
-    list_display = ('user', 'customer_name', 'reservation_date_and_time', 'phone_number', 'number_of_customers')
-    search_fields = ('customer_name', 'reservation_date_and_time', 'phone_number')
-    list_filter = ('customer_name', 'reservation_date_and_time', 'phone_number')
+    list_display = ('user', 'customer_name',
+                    'reservation_date_and_time',
+                    'phone_number',
+                    'number_of_customers')
+    search_fields = ('customer_name',
+                     'reservation_date_and_time',
+                     'phone_number')
+    list_filter = ('customer_name',
+                   'reservation_date_and_time',
+                   'phone_number')

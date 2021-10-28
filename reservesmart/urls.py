@@ -15,9 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#from restaurant.views import get_booking_form, add_booking, view_booking, edit_booking, delete_booking
-from restaurant import views
-
 
 APP_NAME = "restaurant"
 
