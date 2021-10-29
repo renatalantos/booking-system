@@ -26,7 +26,7 @@
         
     {% for booking in bookings %}
     
-  
+    <tr>
         <th scope="col"></th>
         <th scope="col">{{ booking.id }}</th>
         <th scope="col">{{ booking.customer_name }}</th>
@@ -37,14 +37,15 @@
         <th scope="col">{{ booking.number_of_customers}}</th>
         <th scope="col">
 
-            <div class="intro-button mx-auto"><a href="/edit/{{ booking.id }}"><button
-                        class="btn btn-primary btn-xl">Edit Booking</button></a></div>
+            <div class="intro-button mx-auto"><button
+                        class="btn btn-primary btn-xl"><a href="/edit/{{ booking.id }}">Edit Booking</a></button></div>
         </th>
         <th scope="col">
 
             <div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}"><button
                         class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a></div>
         </th>
+        </tr>
     </tbody>
     
     {% endfor %}
@@ -54,7 +55,7 @@
 </table>
 
 
-</div>
+
 
 
 
