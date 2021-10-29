@@ -9,45 +9,34 @@
     <thead>
         <tr>
             <th scope="col"></th>
-            <th scope="col">Booking id</th>
-            <th scope="col">Customer name</th>
             <th scope="col">User by Admin</th>
             <th scope="col">Logged in User</th>
+            <th scope="col">Booking id</th>
+            <th scope="col">Customer name</th>
             <th scope="col">Reservation date and time</th>
             <th scope="col">Phone number</th>
             <th scope="col">Number of guests</th>
-            <th scope="col">
-            </th>
-            <th scope="col"></th>
+            
+
         </tr>
     </thead>
 
     <tbody>
-     
-        
-   
-    
-    <tr>
-        <th scope="col"></th>
-        <th scope="col">Deleted</th>
-        <th scope="col">Deleted</th>
-        <th scope="col">{{ booking.user }}</th>
-        <th scope="col">{{ user.username }}</th>
-        <th scope="col">Deleted</th>
-        <th scope="col">Deleted</th>
-        <th scope="col">Deleted</th>
-        <th scope="col">
-        
-         
-        </th>
-        <th scope="col">
+
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td>{{ user.username }}</td>
+            <td>Deleted</td>
+            <td>Deleted</td>
+            <td>Deleted</td>
+            <td>Deleted</td>
+            <td>Deleted</td>
             
-        </th>
-        </tr>
     </tbody>
-    
-    
-    
+
+
+
 
     {% csrf_token %}
 </table>
