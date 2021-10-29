@@ -36,14 +36,14 @@
         <th scope="col">{{ booking.phone_number }}</th>
         <th scope="col">{{ booking.number_of_customers}}</th>
         <th scope="col">
-
-            <div class="intro-button mx-auto"><button
-                        class="btn btn-primary btn-xl"><a href="/edit/{{ booking.id }}">Edit Booking</a></button></div>
+        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/edit/{{ booking.id }}">Edit Booking</a></div>
+            <!--<div class="intro-button mx-auto"><a href="/edit/{{ booking.id }}"><button
+                        class="btn btn-primary btn-xl">Edit Booking</button></a></div>-->
         </th>
         <th scope="col">
-
-            <div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}"><button
-                        class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a></div>
+            <div class="intro-button mx-auto"><a class="btn btn-primary btn-danger btn-xl" href="/delete/{{ booking.id }}">Delete Booking</a></div>
+            <!--<div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}"><button
+                        class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a></div>-->
         </th>
         </tr>
     </tbody>
