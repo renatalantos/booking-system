@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tempus_dominus',
     'crispy_forms',
-    'bootstrap4',
+    #'bootstrap4',
     'restaurant',
 ]
 
@@ -68,7 +68,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPUS_DOMINUS_LOCALIZE = False
 
