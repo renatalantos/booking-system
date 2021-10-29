@@ -4,44 +4,45 @@
 {% load crispy_forms_tags %}
 
 
-<table class="table table-hover table-dark">
+<div class="table-responsive-sm">
+    <table class="table table-hover table-dark">
 
-    <thead>
-        <tr>
-            <th scope="col"></th>
-            <th scope="col">User by Admin</th>
-            <th scope="col">Logged in User</th>
-            <th scope="col">Booking id</th>
-            <th scope="col">Customer name</th>
-            <th scope="col">Reservation date and time</th>
-            <th scope="col">Phone number</th>
-            <th scope="col">Number of guests</th>
-            
-
-        </tr>
-    </thead>
-
-    <tbody>
-
-        <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td>{{ user.username }}</td>
-            <td>Deleted</td>
-            <td>Deleted</td>
-            <td>Deleted</td>
-            <td>Deleted</td>
-            <td>Deleted</td>
-            
-    </tbody>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">User by Admin</th>
+                <th scope="col">Logged in User</th>
+                <th scope="col">Booking id</th>
+                <th scope="col">Customer name</th>
+                <th scope="col">Reservation date and time</th>
+                <th scope="col">Phone number</th>
+                <th scope="col">Number of guests</th>
 
 
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td>{{ user.username }}</td>
+                <td>Deleted</td>
+                <td>Deleted</td>
+                <td>Deleted</td>
+                <td>Deleted</td>
+                <td>Deleted</td>
+
+        </tbody>
 
 
-    {% csrf_token %}
-</table>
 
 
+        {% csrf_token %}
+    </table>
+
+</div>
 
 
 
