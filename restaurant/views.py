@@ -1,3 +1,6 @@
+"""
+Views to create application logic.
+"""
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Booking
@@ -119,6 +122,7 @@ def delete_booking(request, booking_id):
         'form': form
     }
     return render(request, 'restaurant/delete_booking.html', context)
+
 
 def no_booking_after_delete(request):
     """

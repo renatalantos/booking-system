@@ -1,8 +1,10 @@
+"""
+Form elements that will appear on booking form.
+Based on the Booking model.
+"""
 from tempus_dominus.widgets import DateTimePicker
 from django import forms
 from .models import Booking
-# from django.forms import ModelForm
-# from django.forms import DateTimeInput
 
 
 class BookingForm(forms.ModelForm):
