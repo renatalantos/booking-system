@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['restaurant-reservation-sytem.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ["restaurant-reservation-sytem.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tempus_dominus',
     'crispy_forms',
-    #'bootstrap4',
+    'bootstrap4',
     'restaurant',
 ]
 
@@ -68,7 +68,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-#CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPUS_DOMINUS_LOCALIZE = False
 
