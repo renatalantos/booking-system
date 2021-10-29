@@ -16,36 +16,37 @@
             <th scope="col">Reservation date and time</th>
             <th scope="col">Phone number</th>
             <th scope="col">Number of guests</th>
-            <th scope="col">Edit booking</th>
-            <th scope="col">Delete booking</th>
+            <th scope="col">
+            </th>
+            <th scope="col"></th>
         </tr>
     </thead>
 
     <tbody>
      
         
-    {% for booking in bookings %}
+   
     
     <tr>
         <th scope="col"></th>
-        <th scope="col">{{ booking.id }}</th>
-        <th scope="col">{{ booking.customer_name }}</th>
+        <th scope="col">Deleted</th>
+        <th scope="col">Deleted</th>
         <th scope="col">{{ booking.user }}</th>
         <th scope="col">{{ user.username }}</th>
-        <th scope="col">{{ booking.reservation_date_and_time }}</th>
-        <th scope="col">{{ booking.phone_number }}</th>
-        <th scope="col">{{ booking.number_of_customers}}</th>
+        <th scope="col">Deleted</th>
+        <th scope="col">Deleted</th>
+        <th scope="col">Deleted</th>
         <th scope="col">
-        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/edit/{{ booking.id }}">Edit Booking</a></div>
+        
          
         </th>
         <th scope="col">
-            <div class="intro-button mx-auto"><a class="btn btn-primary btn-danger btn-xl" href="/delete/{{ booking.id }}">Delete Booking</a></div>
+            
         </th>
         </tr>
     </tbody>
     
-    {% endfor %}
+    
     
 
     {% csrf_token %}

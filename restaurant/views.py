@@ -133,4 +133,4 @@ def no_booking_after_delete(request):
     context = {
         'bookings': bookings
     }
-    return render(request, 'restaurant/view_booking.html', context)
+    return render(request, 'restaurant/no_booking.html', context)
