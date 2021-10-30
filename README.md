@@ -1,31 +1,72 @@
-<h1 align="center">Code Institute Website</h1>
 
-[View the live project here.](https://codeinstitute.net)
+# Milestone Project 4 - Restaurant Booking System for Renata's Restaurant
+![All devices](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/site%20features/Intro%20to%20site%20readme.JPG)
 
-This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
+[View the live project here.](https://restaurant-reservation-sytem.herokuapp.com)
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
+This is the main marketing website for the fictitious website, Renata's Restaurant. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential visitors and users.
 
+## Table of Contents
+
+* Introduction
+* UX
+  * Business goals
+  * Owner Goals
+  * User Goals
+
+* Layout
+  * Home
+  * About
+  * Sessions
+  * Gallery
+  * Contact
+  * Confidentiality 
+  
+ * Features
+
+* Structure
+  * Wireframes
+  * Discrepancies with original ideas
+  * Colours
+  * Typography
+
+* Technologies
+
+* Testing
+
+* Bugs, Issues
+
+* Deployment
+
+* Acknowledgements
+## Introduction
+
+The product Restaurant Booking System is an online art quiz game. Art lovers can test their knowledge by answering 15 questions, illustrated by images relating to the work of art or artist. 
+The user has an option to create a username, but they can also play in guest mode.
+The user is given the option to save their username. At the end of the game they receive a message, whose content depends on the score and it displays entered username (if any) and the score in the game as well. During the game, the user is informed about:
+  
+  *  The number of games played in the session
+  *  Which question they are on (Current question)
+  *  Current score
+  *  The highscore
+
+ The site has been designed for desktop, laptop, tablet and mobile devices.
 ## User Experience (UX)
 
 -   ### User stories
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the business.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+        3. As a First Time Visitor, I want to sign up for a user account.
+        4. As a First Time Visitor, I want to create a table booking, view booking details, edit them or delete them.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about coding challenges.
-        2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-        3. As a Returning Visitor, I want to find community links.
-
-    -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-        2. As a Frequent User, I want to check to see if there are any new blog posts.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+        1. As a Returning Visitor, I want to sign into my user account and sign out at the end of the session.
+        2. As a Returning Visitor, I want to create a table booking, view booking details, edit them or delete them.
+   
 
 -   ### Design
     -   #### Colour Scheme
