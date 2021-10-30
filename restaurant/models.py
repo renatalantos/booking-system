@@ -29,9 +29,11 @@ class Booking(models.Model):
                                 null=True,
                                 blank=True,
                                 validators=[validate_date])
+           
     number_of_customers = models.PositiveIntegerField(
                             null=True,
                             validators=[MinValueValidator(1)])
+
     phone_number = models.CharField(max_length=15, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
