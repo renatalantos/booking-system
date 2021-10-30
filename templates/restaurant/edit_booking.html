@@ -3,8 +3,6 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-
-
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
@@ -16,12 +14,10 @@
 
 
                 </h2>
-            
+
                 <p><a href="{% url 'view_booking' %}">Changed my mind, back to my booking</a></p>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        {% if user.is_authenticated %}
-                       
                         <form method="POST" name="form">
 
                             {{form|crispy}}
@@ -30,21 +26,17 @@
                             {% csrf_token %}
 
 
-                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl" type="submit">Submit edited
-                                    booking</button></div>
-
+                            <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
+                                    type="submit">Submit edited booking</button>
+                            </div>
+                        </form>
 
                     </div>
-                    </form>
-
-                    {% endif %}
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 
 
 {% endblock content %}
-

@@ -12,43 +12,22 @@
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
                     <span class="section-heading-upper">Are you sure you want to delete this booking?</span>
-
-
                 </h2>
                 <p><a href="{% url 'view_booking' %}">No, back to my booking</a></p>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        {% if user.is_authenticated %}
-                        <!-- Logged in as <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">{{user.username}}</span>
-    
-    
-                            </h2>-->
-
                         <form method="POST" name="form">
 
                             {{form|crispy}}
-
-
                             {% csrf_token %}
-
-
-
-
-                            <div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}"><button
-                                        class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a></div>
-
-
-
-
-                    </div>
-                    </form>
-
-                    {% endif %}
+                            <div class="intro-button mx-auto"><a href="/delete/{{ booking.id }}">
+                                <button class="btn btn-danger btn-primary btn-xl">Delete Booking</button></a>
+                            </div>
+                        </form>
+                    </div>                         
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 

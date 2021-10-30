@@ -33,8 +33,7 @@ class Booking(models.Model):
     number_of_customers = models.PositiveIntegerField(
                             null=True,
                             validators=[MinValueValidator(1)])
-
-    phone_number = models.CharField(max_length=15, null=True)
+    phone_number = models.CharField(null=True, blank=True, max_length=14)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

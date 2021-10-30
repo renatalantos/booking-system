@@ -28,3 +28,4 @@ class BookingForm(forms.ModelForm):
         self.fields['reservation_date_and_time'].widget.attrs['class'] = 'form-control datetimepicker-input'
         self.fields['reservation_date_and_time'].widget = DateTimePicker()
         self.fields['reservation_date_and_time'].widget.attrs['required'] = 'required'
+        self.fields['phone_number'].widget.attrs['required'] = 'required'

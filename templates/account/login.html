@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% load static%}
-
 {% load i18n %}
 {% load account socialaccount %}
-
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
-
 {% block content %}
 {% load crispy_forms_tags %}
 
@@ -15,19 +12,12 @@
     <div class="intro">
       <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/intro_booking.jpg' %}"
                 alt="Girl with tray of food and driks" />
-
-
       <div class="intro-text left-0 text-center bg-faded p-5 rounded">
         <h2 class="section-heading mb-4">
           <span class="section-heading-upper">{% trans "Sign In" %}</span>
-
-
         </h2>
         <div class="row">
           <div class="col-md-8 mt-3 offset-md-2">
-
-
-
               <p>{% blocktrans %}If you have not created an account yet, then please
                 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
@@ -38,19 +28,12 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-
-
                 {% csrf_token %}
 
                     <button class="btn btn-signup right btn-success" type="submit">{% trans "Sign In" %}</button>
               </form>
-
-
-
           </div>
-   
-
-        </div>
+         </div>
       </div>
     </div>
   </div>

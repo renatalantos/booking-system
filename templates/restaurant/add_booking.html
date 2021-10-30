@@ -3,9 +3,6 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-
-
-
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
@@ -14,46 +11,37 @@
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
                     <span class="section-heading-upper">Table Booking Form</span>
-
-
                 </h2>
-                
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                      {% if user.is_authenticated %}
-                        
+                        {% if user.is_authenticated %}
                         <p>
                             Please make sure the booking date is not in the past.
                         </p>
                         <form method="POST" action="{% url 'add_booking' %}" name="form">
-                          
+
                             {{ form|crispy }}
-                            
-                             
-                             {% csrf_token %}
+
+
+                            {% csrf_token %}
 
 
                             <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-                                    type="submit">Submit Booking</button></div>
+                                    type="submit">Submit Booking</button>
+                            </div>
 
-
+                        </form>
                     </div>
-                    </form>
                     {% else%}
                     <h2 class="section-heading mb-4">
                         <span class="section-heading-upper">Please <a class="nav-link  text-uppercase"
-                            href="{% url 'account_login' %}">sign in </a>or <a class="nav-link text-uppercase"
-                            href="{% url 'account_signup' %}">register </a>to make a Booking</span>
+                                href="{% url 'account_login' %}">sign in </a>or <a class="nav-link text-uppercase"
+                                href="{% url 'account_signup' %}">register </a>to make a Booking</span>
                     </h2>
-
-                  {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    </div>
 </section>
-
-
-
 {% endblock content %}
