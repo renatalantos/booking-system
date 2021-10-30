@@ -55,6 +55,7 @@ def contact(request):
     """
     return render(request, 'restaurant/contact.html')
 
+
 @login_required
 def add_booking(request):
     """
@@ -75,6 +76,7 @@ def add_booking(request):
         }
     return render(request, 'restaurant/add_booking.html', context)
 
+
 @login_required
 def view_booking(request):
     """
@@ -86,6 +88,7 @@ def view_booking(request):
         'bookings': bookings
     }
     return render(request, 'restaurant/view_booking.html', context)
+
 
 @login_required
 def edit_booking(request, booking_id):
@@ -107,6 +110,7 @@ def edit_booking(request, booking_id):
         'form': form
     }
     return render(request, 'restaurant/edit_booking.html', context)
+
 
 @login_required
 def delete_booking(request, booking_id):

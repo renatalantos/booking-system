@@ -14,7 +14,7 @@
                 </h2>
                 <div class="row">
                     <div class="col-md-8 mt-3 offset-md-2">
-                        {% if user.is_authenticated %}
+                       
                         <p>
                             Please make sure the booking date is not in the past.
                         </p>
@@ -32,13 +32,8 @@
 
                         </form>
                     </div>
-                    {% else%}
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-upper">Please <a class="nav-link  text-uppercase"
-                                href="{% url 'account_login' %}">sign in </a>or <a class="nav-link text-uppercase"
-                                href="{% url 'account_signup' %}">register </a>to make a Booking</span>
-                    </h2>
-                    {% endif %}
+                    
+                 
                 </div>
             </div>
         </div>

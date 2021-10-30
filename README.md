@@ -10,11 +10,12 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 
 * Introduction
 * UX
-  * Business goals
-  * Owner Goals
-  * User Goals
 
-* Layout
+  * First Time Visitor Goals
+  * Returning Visitor Goals
+
+* Design
+==============
   * Home
   * About
   * Sessions
@@ -41,48 +42,51 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 * Acknowledgements
 ## Introduction
 
-The product Restaurant Booking System is an online art quiz game. Art lovers can test their knowledge by answering 15 questions, illustrated by images relating to the work of art or artist. 
-The user has an option to create a username, but they can also play in guest mode.
-The user is given the option to save their username. At the end of the game they receive a message, whose content depends on the score and it displays entered username (if any) and the score in the game as well. During the game, the user is informed about:
-  
-  *  The number of games played in the session
-  *  Which question they are on (Current question)
-  *  Current score
-  *  The highscore
+The product Restaurant Booking System is a fictitious restaurant website. 
+Beside being able to view pages like the home page, menu and the contact page, users are also able to create an account, sign in and avail of the table booking feature, which unregistered users don't have access to. Through the booking, users can access all their previous bookings, edit and delete them. Site user administrators have access to all bookings and all create, edit and delete functionalities.
+The site has been designed to be fully responsive on desktop, laptop, tablet and mobile devices.
 
- The site has been designed for desktop, laptop, tablet and mobile devices.
 ## User Experience (UX)
 
--   ### User stories
+-   ### User stories 
 
     -   #### First Time Visitor Goals
 
         1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the business.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to sign up for a user account.
-        4. As a First Time Visitor, I want to create a table booking, view booking details, edit them or delete them.
+        3. As a First Time Visitor, I want to sign up for a user account to access restricted content.
+        4. As a First Time Visitor, I want to create a table booking, view booking details, and learn what changes I can make on created bookings.
 
     -   #### Returning Visitor Goals
 
         1. As a Returning Visitor, I want to sign into my user account and sign out at the end of the session.
-        2. As a Returning Visitor, I want to create a table booking, view booking details, edit them or delete them.
-   
+        2. As a Returning Visitor, I want to create a table booking, view booking my current and previous booking details, edit them or delete them.
+        3. As a Returning Visitor, I want to sign out of my account at the end of the session to keep my account safe.
+        4. As a Returning visitor I want to leave feedback on the restaurant services.
+
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue red, and white.
+        -   The main colours in the website theme for header, background, footer and text labels are brown, yellow, and beige.
     -   #### Typography
-        -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+        -   I used a standard Bootstrap theme with all the components and styling. The css stylesheet was using a set of Google Fonts, like BlinkMacSystemFont, Segoe UI with fallback to Roboto, Helvetica Neue with fallback to Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji.
     -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+        -   Imagery was chosen to go with the website's colour and content theme. I'm using dining and restaurant interior images with deep-toned, soothing colours with attractive graphics.
 
 *   ### Wireframes
+    -   #### A note
+        -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding for Bootstrap. By using a Boostrap theme, my theme is more unified, too.
 
-    -   Home Page Wireframe - [View](https://github.com/)
+    -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
 
-    -   Mobile Wireframe - [View](https://github.com/)
+    -   Booking Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+    -   Contact Us Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Contact%20Page%20Wireframe.pdf)
+
+    -   Login Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Login%20Page%20Wireframe.pdf)
+
+    -   Register Page Wireframe -[View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Register%20Page%20Wireframe.pdf)
+
 
 ## Features
 

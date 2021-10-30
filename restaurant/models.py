@@ -9,6 +9,7 @@ from django.core.validators import MinValueValidator
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+
 class Booking(models.Model):
     """
     Class to represent booking model
@@ -50,6 +51,7 @@ class Booking(models.Model):
         Function to return object model
         items as string.
         """
-        return f' Customer {self.customer_name} has made a booking\
-                          for {self.number_of_customers} customers\
-                          for {self.reservation_date_and_time}.'
+        return f' User {self.user} has made a booking \
+                   for {self.customer_name}\
+                   for {self.number_of_customers} customers\
+                   for {self.reservation_date_and_time}.'
