@@ -15,7 +15,10 @@ class Booking(models.Model):
     Class to represent booking model
     in database and for booking form.
     """
-    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User,
+                             null=True,
+                             blank=True,
+                             on_delete=models.CASCADE)
     customer_name = models.CharField(max_length=20, null=True)
     reservation_date_and_time = models.DateTimeField(null=True)
 
@@ -30,7 +33,6 @@ class Booking(models.Model):
                                 null=True,
                                 blank=True,
                                 validators=[validate_date])
-           
     number_of_customers = models.PositiveIntegerField(
                             null=True,
                             validators=[MinValueValidator(1)])

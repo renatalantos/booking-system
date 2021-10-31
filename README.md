@@ -148,12 +148,14 @@ In mobile phone landscape mode all columns show beside one another, however, the
     -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint validator to validate the Python files.
 
 -   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
     - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    - See the [CSS Validator Results]()
+    - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
+-   [Gitpod Pylint](https://pylint.org/)
+    - See the [Gitpod Pylint Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)    
 
 ### Testing User Stories from User Experience (UX) Section
 
