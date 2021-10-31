@@ -71,11 +71,11 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
     -   #### Typography
         -   I used a standard Bootstrap theme with all the components and styling. The css stylesheet was using a set of Google Fonts, like BlinkMacSystemFont, Segoe UI with fallback to Roboto, Helvetica Neue with fallback to Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji.
     -   #### Imagery
-        -   Imagery was chosen to go with the website's colour and content theme. I'm using dining and restaurant interior images with deep-toned, soothing colours with attractive graphics.
+        -   Imagery was chosen to go with the website's colour and content theme. I'm using dining and restaurant interior images with deep-toned, soothing colours and attractive graphics. For the edit, delete and logout page I'm using images with graphics that signal what will happen if user edits, deletes or signs out.
 
 *   ### Wireframes
     -   #### A note
-        -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding for Bootstrap. By using a Boostrap theme, my theme is more unified, too.
+        -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding for Bootstrap. By using a Boostrap theme, my theme is more unified, too. I also created a menu page in the site.
 
     -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
 
