@@ -10,11 +10,19 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 
 * Introduction
 * UX
+    - User Stories
+        -  First Time Visitor Goals
+        -  Returning Visitor Goals 
+* Layout
 
-  * First Time Visitor Goals
-  * Returning Visitor Goals
+    - Design
+        -  Colour scheme
+        -  Typography
+        -  Images
+    - Wireframes
+        - Discrepancy with original ideas
+        - Links to Wireframes
 
-* Design
 ==============
   * Home
   * About
@@ -64,7 +72,7 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         3. As a Returning Visitor, I want to sign out of my account at the end of the session to keep my account safe.
         4. As a Returning visitor I want to leave feedback on the restaurant services.
 
-
+## Layout
 -   ### Design
     -   #### Colour Scheme
         -   The main colours in the website theme for header, background, footer and text labels are brown, yellow, and beige.
@@ -74,9 +82,9 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         -   Imagery was chosen to go with the website's colour and content theme. I'm using dining and restaurant interior images with deep-toned, soothing colours and attractive graphics. For the edit, delete and logout page I'm using images with graphics that signal what will happen if user edits, deletes or signs out.
 
 *   ### Wireframes
-    -   #### A note
-        -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding for Bootstrap. By using a Boostrap theme, my theme is more unified, too. I also created a menu page in the site.
-
+    -   #### Discrepancy with original ideas
+        -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding to use Bootstrap. By using a Boostrap theme, my theme is more unified, too. I also created a menu page for the site, which wasn't in my original plans.
+    -   #### Links to Wireframes
     -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
 
     -   Booking Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
@@ -90,7 +98,10 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
 
 ## Features
 
--   Responsive on all device sizes
+-   The application is responsive on all device sizes, thanks to the Boostrap theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized. There is an exception, however: when bookings are displayed in the database table in the view_booking.html, on mobile phone screens in portrait mode there is not enough room for all columns to be shown. However, Bootstrap adds a slide bar so that user can slide the page content from left to right. 
+[View database table in portrait mode on smallest mobile device]()
+In mobile phone landscape mode all columns show beside one another, however, the nav header and footer don't reach from one end of the page to the other.
+[View database table in landscape mode on smallest mobile device]()
 
 -   Interactive elements
 
