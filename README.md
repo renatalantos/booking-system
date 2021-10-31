@@ -77,7 +77,7 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
     -   #### Colour Scheme
         -   The main colours in the website theme for header, background, footer and text labels are brown, yellow, and beige.
     -   #### Typography
-        -   I used a standard Bootstrap theme with all the components and styling. The css stylesheet was using a set of Google Fonts, like BlinkMacSystemFont, Segoe UI with fallback to Roboto, Helvetica Neue with fallback to Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji.
+        -   I used a standard Bootstrap theme with all the components and styling. Raleway and Lora are the main fonts used, Raleway for label titles and Lora for body text.
     -   #### Imagery
         -   Imagery was chosen to go with the website's colour and content theme. I'm using dining and restaurant interior images with deep-toned, soothing colours and attractive graphics. For the edit, delete and logout page I'm using images with graphics that signal what will happen if user edits, deletes or signs out.
 
@@ -85,25 +85,33 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
     -   #### Discrepancy with original ideas
         -   I originally intended to create my own HTML pages and CSS styling, however, I decided to use a standard Bootstrap theme instead, which saved me a huge amount of time. I simply followed the theme layout, customized text labels for various forms, so the original wireframes were not used at all. As the theme is fully responsive, I didn't create mobile device wireframes after deciding to use Bootstrap. By using a Boostrap theme, my theme is more unified, too. I also created a menu page for the site, which wasn't in my original plans.
     -   #### Links to Wireframes
-    -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
 
-    -   Booking Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
+        -   Home Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Home%20Page%20Wireframe.pdf)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Contact%20Page%20Wireframe.pdf)
+        -   Booking Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Booking%20Page%20Wireframe.pdf)
 
-    -   Login Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Login%20Page%20Wireframe.pdf)
+        -   Contact Us Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Contact%20Page%20Wireframe.pdf)
 
-    -   Register Page Wireframe -[View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Register%20Page%20Wireframe.pdf)
+        -   Login Page Wireframe - [View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Login%20Page%20Wireframe.pdf)
+
+        -   Register Page Wireframe -[View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Register%20Page%20Wireframe.pdf)
 
 
 ## Features
+-   ### Responsivity
 
--   The application is responsive on all device sizes, thanks to the Boostrap theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized. There is an exception, however: when bookings are displayed in the database table in the view_booking.html, on mobile phone screens in portrait mode there is not enough room for all columns to be shown. However, Bootstrap adds a slide bar so that user can slide the page content from left to right. 
-[View database table in portrait mode on smallest mobile device]()
+The application is responsive on all device sizes, thanks to the Boostrap theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized. There is an exception, however: when bookings are displayed in the database table in the view_booking.html, on mobile phone screens in portrait mode there is not enough room for all columns to be shown. However, Bootstrap adds a slide bar so that user can slide the page content from left to right. 
+
+[View database table in portrait mode on smallest mobile device](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/site%20features/Booking%20table%20with%20slide%20bar.JPG)
+
 In mobile phone landscape mode all columns show beside one another, however, the nav header and footer don't reach from one end of the page to the other.
-[View database table in landscape mode on smallest mobile device]()
 
--   Interactive elements
+[View database table in landscape mode on smallest mobile device](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/site%20features/Booking%20table%20landscape.JPG)
+
+-   ### Interactive elements
+    -   #### Nav links for Home, Menu, Book a Table, Contact Us, Register, Login and Logout pages
+    -   #### Form input fields on signup, register, signout, table booking, edit booking and delete booking forms
+    -   #### Buttons - including form buttons (signup, register, signout, table booking, edit booking and delete booking form buttons) and page buttons (Visit Us button on Home page)
 
 ## Technologies Used
 
@@ -111,34 +119,41 @@ In mobile phone landscape mode all columns show beside one another, however, the
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-### Frameworks, Libraries & Programs Used
-
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+### Frameworks, Libraries & Programs Used / lucidcahrt, heroku, sqlite3 database, cloudinary
+1. [Django:](https://www.djangoproject.com/)
+    - The Python-based Django framework was used to set up the structure, functionalities,  data model and database of the website.
+1. [Bootstrap 5.1.3:](https://startbootstrap.com/theme/business-casual)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+    -    Raleway and Lora are the main fonts used, Raleway for label titles and Lora for body text.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-1. [Git](https://git-scm.com/)
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript. It is also used for the Bootstrap Tempus Dominus datetime picker and to define visibility duration for popup messages that signal successful completion of different form related activities.
+1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-
+    - Balsamiq was used to create the wireframes during the design process. [Wireframes](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/wireframes)
+1. [Lucidchart:](https://www.lucidchart.com/)
+    - Lucidchart was used to create the data model of the project . [View Booking data model](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/1%20model%20only%20with%20Booking.JPG)   
+1. [SQLite3 database:](https://en.wikipedia.org/wiki/SQLite)
+    - SQLite3 is Django's default database system
+1. [Cloudinary:](https://cloudinary.com/)
+    - I used cloudinary for cloud-based storage and partly for linking of my website images.
+1. [Heroku:](https://www.heroku.com/)
+    -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
+    - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - See the [CSS Validator Results]()
 
 ### Testing User Stories from User Experience (UX) Section
 
