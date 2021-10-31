@@ -183,14 +183,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 
         1. Once the first-time user has created an account and been redirected to the home page, they can click on the Book a Table nav link again. This time they will see a hero image with tables and a booking form with the  following form elements:
-            - ### Form title "Table Booking Form"
-            - ### A request to the user asking them not to put in a past date
-            - ### The following input fields:
-                *   Customer name - takes alphanumerical characters
-                *   Phone number - takes alphanumerical characters
-                *   Reservation date and time - has a calendar popping up with date and time picker
-                *   Number of customers - takes only positive whole numbers (not 0)
-            - ### Submit booking button
+            - #### Form title "Table Booking Form"
+            - #### A request to the user asking them not to put in a past date
+            - #### The following input fields:
+                *   ##### Customer name - takes alphanumerical characters
+                *   ##### Phone number - takes alphanumerical characters
+                *   ##### Reservation date and time - has a calendar popping up with date and time picker
+                *   ##### Number of customers - takes only positive whole numbers (not 0)
+            - #### Submit booking button
 
 
         2.  User enters in Customer name, phone number, reservation date and time and number of customers on the form.
@@ -214,27 +214,27 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         3. If user decides that they do not wish to perform any further action on their booking, they can easily go on any other site page from the navbar that is visible straight above the bookings table.
         4. If user decides, that they wish to edit their booking, they must click on the Edit Booking button. The booking will appear on a separate page, with a clean pad and pencil image, on a form like the table booking form. The form has the following elements:
-        - ### Form title "Edit Your Booking"
-        - ### Link "Changed my mind, back to my booking" in case customer has changed their mind
-        - ### The following input fields:
-            *   Customer name - as per user input when creating a booking
-            *   Phone number - as per user input when creating a booking
-            *   Reservation date and time - as per user input when creating a booking
-            *   Number of customers - as per user input when creating a booking
-        - ### Submit edited booking button
+        - #### Form title "Edit Your Booking"
+        - #### Link "Changed my mind, back to my booking" in case customer has changed their mind
+        - #### The following input fields:
+            *  ##### Customer name - as per user input when creating a booking
+            *  ##### Phone number - as per user input when creating a booking
+            *  ##### Reservation date and time - as per user input when creating a booking
+            *  ##### Number of customers - as per user input when creating a booking
+        - #### Submit edited booking button
 
         If user clicks on "Changed my mind, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
         Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
         
         5. If user decides, that they wish to delete their booking, they must click on the Delete Booking button. The booking will appear on a separate page, with a waste paper basket image, on a form like the table booking form. The form has the following elements:
-        - ### Form title "Are You Sure You Wnt to Delete this Booking?"
-        - ### Link "No, back to my booking" in case customer has changed their mind
-        - ### The following input fields:
-            *   Customer name - as per user input when creating a booking
-            *   Phone number - as per user input when creating a booking
-            *   Reservation date and time - as per user input when creating a booking
-            *   Number of customers - as per user input when creating a booking
-        - ### Delete booking button
+        - #### Form title "Are You Sure You Wnt to Delete this Booking?"
+        - #### Link "No, back to my booking" in case customer has changed their mind
+        - #### The following input fields:
+            * ##### Customer name - as per user input when creating a booking
+            * ##### Phone number - as per user input when creating a booking
+            * ##### Reservation date and time - as per user input when creating a booking
+            * ##### Number of customers - as per user input when creating a booking
+        - #### Delete booking button
 
         If user clicks on "No, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
         When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
@@ -296,7 +296,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     2. As a Site Administrator I would like to be able to create, view, edit and delete bookings.
         1. Once the booking object is created in the admin database (after being created in models.py, registered in admins.py and being connected to the database), a site administrator can avail of the inbuilt functionalities in the Django admin site, like adding bookings, viewing all bookings made, editing and deleting bookings. This is fairly straightforward. All booking related changes on the website (front end) like adding, editing and deleting are synchronized with this django admin database and vice versa.
-        [Django Admin Database Functionalities]()
+        [Django Admin Database Functionalities](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/admin%20page)
 
 ### Further Testing
 
