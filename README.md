@@ -59,14 +59,20 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         3. As a First Time Visitor, I want to sign up for a user account to access restricted content.
         4. As a First Time Visitor, I want to create a table booking, view booking details, and learn what changes I can make on created bookings.
         5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe.
+        
 
-    -   #### Returning Visitor Goals
+    -   #### Returning and Frequent Visitor Goals
 
-        1. As a Returning Visitor, I want to sign into my user account.
-        2. As a Returning Visitor, I want to create a table booking, view my current and previous booking details, and alternatively edit them or delete them.
-        3. As a Returning Visitor, I want to sign out of my account at the end of the session to keep my account safe.
-        4. As a Returning visitor I want to like on the restaurant services.
-        5. As a Returning visitor I want to send messages and queries to the site owner.
+        1. As a Returning and Frequent Visitor, I want to sign into my user account.
+        2. As a Returning and Frequent Visitor, I want to create a table booking, view my current and previous booking details, and alternatively edit them or delete them.
+        3. As a Returning and Frequent visitor I want to send messages and queries to the site owner.
+        4. As a Returning and Frequent visitor I want to like the restaurant services.
+        5. As a Returning and Frequent Visitor, I want to sign out of my account at the end of the session to keep my account safe.
+
+    -   #### Site Administrator Goals
+        1. As a Site Administrator I would like to be able to create, view, edit and delete bookings.    
+        
+        
 
 ## Layout
 -   ### Design
@@ -168,7 +174,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     3. As a First Time Visitor, I want to sign up for a user account to access restricted content.
         1. Once the new visitor has read the Home, Contact us and Menu pages, had a look at what the Login and Register pages do, they might decide to book a table at the restaurant. They will click on the Book a Table navigation link, which will take them to the login page sign in form (hero image with restaurant interior and sign in form).
-        2. The login page sign in form contains a link where user can create an account from: "If you have not created an account yet, then please sign up to make reservations."
+        2. The login page sign in form contains a link where user can create an account from: "If you have not created an account yet, then please sign up to make reservations." This way users can understand that all booking functionalities are only accessed for registered users.
         3. Alternatively, the user might want to create an account from the navbar link "Register", which will take them straight to the signup form. 
         4. Once the user signs up by creating a username, optionally adding an email address, creating and repeating the password, they are redirected to the home page. 
         5. In the navbar now, the Login and Register navbar links have disappeared, Logout and Logged in as (Created username) appear instead.
@@ -211,10 +217,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - ### Form title "Edit Your Booking"
         - ### Link "Changed my mind, back to my booking" in case customer has changed their mind
         - ### The following input fields:
-                *   Customer name - as per user input when creating a booking
-                *   Phone number - as per user input when creating a booking
-                *   Reservation date and time - as per user input when creating a booking
-                *   Number of customers - as per user input when creating a booking
+            *   Customer name - as per user input when creating a booking
+            *   Phone number - as per user input when creating a booking
+            *   Reservation date and time - as per user input when creating a booking
+            *   Number of customers - as per user input when creating a booking
         - ### Submit edited booking button
 
         If user clicks on "Changed my mind, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
@@ -224,10 +230,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - ### Form title "Are You Sure You Wnt to Delete this Booking?"
         - ### Link "No, back to my booking" in case customer has changed their mind
         - ### The following input fields:
-                *   Customer name - as per user input when creating a booking
-                *   Phone number - as per user input when creating a booking
-                *   Reservation date and time - as per user input when creating a booking
-                *   Number of customers - as per user input when creating a booking
+            *   Customer name - as per user input when creating a booking
+            *   Phone number - as per user input when creating a booking
+            *   Reservation date and time - as per user input when creating a booking
+            *   Number of customers - as per user input when creating a booking
         - ### Delete booking button
 
         If user clicks on "No, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
@@ -236,48 +242,61 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         
     5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe. 
         1. To accomplish this, user clicks on the Logout navbar link.
-        2. A logout form with matching image as a background and with the following elements:
-        - ### Form title "Sign Out"
-        - ### Text "Are you sure you want to sign out?"
-        - ### Sign Out button
-        3. User is taken to the home page, at the same time the message "You have signed out" appears.
+        2. A logout form with matching image as a background and with the following elements appears:
+            *   Form title "Sign Out"
+            *   Text "Are you sure you want to sign out?"
+            *   Sign Out button
+        3. If user clicks on the SIgn Out button, they are taken to the home page, at the same time the message "You have signed out" appears.
+
+     
 
 
 
--   #### Returning Visitor Goals
+-   #### Returning and Frequent Visitor Goals
 
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
+     1. As a Returning and Frequent Visitor, I want to sign into my user account to access restricted content.
 
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
+        1. User clicks on Login button.
+        2. They will be directed to the sign in form.
+        3. They enter username and password created at the signup.
+        4. If username and password match, they are taken to the home page. At the same time a pop up message appears
+        "Successfully signed in as 'username'".
+        5. If username and/or password are incorrect, the following message appears on the signup form: "The username and/or password you specified are not correct." User need to enter correct details or re-register. They are directed to the home page then.
+        6. If user signs in by clicking on the Book a Table link first, they are directed to the Book a Table page.
 
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
 
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
+    2. As a Returning and Frequent Visitor, I want to create a new table booking, view details of my newly made and previous bookings, and alternatively edit them or delete them.
 
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
+        1. In order to access the bookings table, users need to create a new booking, as these are not stored separately 
+        in e.g. account details.
+        2. Therefore, returning users are required to follow the steps described above for adding, viewing, editing and deleting bookings for First Time Visitors.
+        
+    3. As a Returning and Frequent visitor I want to like the restaurant services on their website.
+        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as could have)   
+        [Agile User Stories](https://github.com/renatalantos/booking-system/projects/1)
+    4. As a Returning and Frequent visitor I want to send messages and queries to the site owner via a form.
+        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as should have)   
+        [Agile User Stories](https://github.com/renatalantos/booking-system/projects/1)
 
--   #### Frequent User Goals
+    5. As a Returning and Frequent Visitor, I want to sign out of my account at the end of the session to keep my account safe.
+        1. User should follow the steps described above for First Time Visitors.
+    6. As a Returning and Frequent Visitor, I would like to see if there are any changes to the menu or opening hours.
+        1. User goes on the Menu or Contact page to do this.
 
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
+-   #### Site Administrator Goals
 
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
+    1. As a Site Administrator I would like register as a site admin and then log into the admin page.
+        1. In the Django framework, in the terminal window of the development environment the following command needs to be run:
+        python manage.py createsuperuser and then user needs to press enter 
+        2. Next user is prompted to create a username and then user needs to press enter 
+        3. Next user is prompted to enter an email address (optional) and then user needs to press enter 
+        4. Next user is prompted to enter a password, press enter, repeat password and then user needs to press enter again. 
+        1. In the Django framework, the site administrator can log into the site by adding /admin to the basic web address. 
+        2. They can login here through the standard login form provided.
 
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+    2. As a Site Administrator I would like to be able to create, view, edit and delete bookings.
+        1. Once the booking object is created in the admin database (after being created in models.py, registered in admins.py and being connected to the database), a site administrator can avail of the inbuilt functionalities in the Django admin site, like adding bookings, viewing all bookings made, editing and deleting bookings. This is fairly straightforward. All booking related changes on the website (front end) like adding, editing and deleting are synchronized with this django admin database and vice versa.
+        [Django Admin Database Functionalities]()
 
 ### Further Testing
 
