@@ -23,14 +23,8 @@ This is the main marketing website for the fictitious website, Renata's Restaura
         - Discrepancy with original ideas
         - Links to Wireframes
 
-==============
-  * Home
-  * About
-  * Sessions
-  * Gallery
-  * Contact
-  * Confidentiality 
-  
+++++++ Correct table content ++++++++++
+
  * Features
 
 * Structure
@@ -64,13 +58,15 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
         3. As a First Time Visitor, I want to sign up for a user account to access restricted content.
         4. As a First Time Visitor, I want to create a table booking, view booking details, and learn what changes I can make on created bookings.
+        5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to sign into my user account and sign out at the end of the session.
-        2. As a Returning Visitor, I want to create a table booking, view booking my current and previous booking details, edit them or delete them.
+        1. As a Returning Visitor, I want to sign into my user account.
+        2. As a Returning Visitor, I want to create a table booking, view my current and previous booking details, and alternatively edit them or delete them.
         3. As a Returning Visitor, I want to sign out of my account at the end of the session to keep my account safe.
-        4. As a Returning visitor I want to leave feedback on the restaurant services.
+        4. As a Returning visitor I want to like on the restaurant services.
+        5. As a Returning visitor I want to send messages and queries to the site owner.
 
 ## Layout
 -   ### Design
@@ -121,7 +117,7 @@ In mobile phone landscape mode all columns show beside one another, however, the
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-### Frameworks, Libraries & Programs Used / lucidcahrt, heroku, sqlite3 database, cloudinary
+### Frameworks, Libraries & Programs Used
 1. [Django:](https://www.djangoproject.com/)
     - The Python-based Django framework was used to set up the structure, functionalities,  data model and database of the website.
 1. [Bootstrap 5.1.3:](https://startbootstrap.com/theme/business-casual)
@@ -146,37 +142,107 @@ In mobile phone landscape mode all columns show beside one another, however, the
     - I used cloudinary for cloud-based storage and partly for linking of my website images.
 1. [Heroku:](https://www.heroku.com/)
     -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
+
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint validator to validate the Python files.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint compiler to validate the Python files.
 
 -   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
     - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
 -   [Gitpod Pylint](https://pylint.org/)
-    - See the [Gitpod Pylint Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)    
+    - See the [Gitpod Pylint Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/pylint%20validation)    
 
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
+    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the business.
+        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Visit Us Today!" Call to action button. The name a resturant is a banner above the navigation bar, with a bit of a fun fact above. (WINNER OF THE SURPRISE ENTREPRENEUR OF THE YEAR AWARD)
+        2. The main points are made immediately with the hero image, which is a restaurant interior and the text label attached to it.
+        3. The user has two options, click the call to action button "Visit Us Today!" or go to the "Contact Us" page, both of which will lead to the same place, to learn more about the restaurant.
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
+    2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+        1. The site has been designed to have minimum content per page so that the user is not entrapped. The content is limited to what it says in the navigation links. The navigation bar is more towards the middle of the page and each link clearly describes what the page where the user will end up does.
 
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
+    3. As a First Time Visitor, I want to sign up for a user account to access restricted content.
+        1. Once the new visitor has read the Home, Contact us and Menu pages, had a look at what the Login and Register pages do, they might decide to book a table at the restaurant. They will click on the Book a Table navigation link, which will take them to the login page sign in form (hero image with restaurant interior and sign in form).
+        2. The login page sign in form contains a link where user can create an account from: "If you have not created an account yet, then please sign up to make reservations."
+        3. Alternatively, the user might want to create an account from the navbar link "Register", which will take them straight to the signup form. 
+        4. Once the user signs up by creating a username, optionally adding an email address, creating and repeating the password, they are redirected to the home page. 
+        5. In the navbar now, the Login and Register navbar links have disappeared, Logout and Logged in as (Created username) appear instead.
+    
+    4. As a First Time Visitor, I want to create a table booking, view booking details, and learn what changes I can make on created bookings.
 
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
 
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
+        1. Once the first-time user has created an account and been redirected to the home page, they can click on the Book a Table nav link again. This time they will see a hero image with tables and a booking form with the  following form elements:
+            - ### Form title "Table Booking Form"
+            - ### A request to the user asking them not to put in a past date
+            - ### The following input fields:
+                *   Customer name - takes alphanumerical characters
+                *   Phone number - takes alphanumerical characters
+                *   Reservation date and time - has a calendar popping up with date and time picker
+                *   Number of customers - takes only positive whole numbers (not 0)
+            - ### Submit booking button
+
+
+        2.  User enters in Customer name, phone number, reservation date and time and number of customers on the form.
+        Although only two fields are marked with an asterisk, customer cannot submit without filling in all fields. 
+        
+        
+        [Please click on this link for more detail on validation issues and successful validation on the booking form: ]()
+        
+        
+        Once customer clicks on Submit booking, they are redirected to a page where bookings are arranged in a table. At the same time a pop up message appears just under the navbar: "Booking successful".
+        The table where the booking(s) is visible has the following headings and the row(s) and columns(s) underneath:
+        * Logged in User - username as per what user is logged in as
+        * Booking Id - booking id as generated by the foor loop in view_booking.html
+        * Customer name - as per user input on booking form
+        * Reservation date and time - as per user input on booking form
+        * Phone number - as per user input on booking form
+        * Number of guests - as per user input on booking form
+        * Edit booking - button
+        * Delete booking - button
+
+
+        3. If user decides that they do not wish to perform any further action on their booking, they can easily go on any other site page from the navbar that is visible straight above the bookings table.
+        4. If user decides, that they wish to edit their booking, they must click on the Edit Booking button. The booking will appear on a separate page, with a clean pad and pencil image, on a form like the table booking form. The form has the following elements:
+        - ### Form title "Edit Your Booking"
+        - ### Link "Changed my mind, back to my booking" in case customer has changed their mind
+        - ### The following input fields:
+                *   Customer name - as per user input when creating a booking
+                *   Phone number - as per user input when creating a booking
+                *   Reservation date and time - as per user input when creating a booking
+                *   Number of customers - as per user input when creating a booking
+        - ### Submit edited booking button
+
+        If user clicks on "Changed my mind, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
+        Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+        
+        5. If user decides, that they wish to delete their booking, they must click on the Delete Booking button. The booking will appear on a separate page, with a waste paper basket image, on a form like the table booking form. The form has the following elements:
+        - ### Form title "Are You Sure You Wnt to Delete this Booking?"
+        - ### Link "No, back to my booking" in case customer has changed their mind
+        - ### The following input fields:
+                *   Customer name - as per user input when creating a booking
+                *   Phone number - as per user input when creating a booking
+                *   Reservation date and time - as per user input when creating a booking
+                *   Number of customers - as per user input when creating a booking
+        - ### Delete booking button
+
+        If user clicks on "No, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
+        When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+
+        
+    5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe. 
+        1. To accomplish this, user clicks on the Logout navbar link.
+        2. A logout form with matching image as a background and with the following elements:
+        - ### Form title "Sign Out"
+        - ### Text "Are you sure you want to sign out?"
+        - ### Sign Out button
+        3. User is taken to the home page, at the same time the message "You have signed out" appears.
+
+
 
 -   #### Returning Visitor Goals
 
