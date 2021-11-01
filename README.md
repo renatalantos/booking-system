@@ -8,47 +8,48 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 
 ## Table of Contents
 
-* Introduction
-* UX
+* [Introduction](#introduction)
+
+* [UX](#ux) 
     - User Stories
         -  First Time Visitor Goals
-        -  Returning Visitor Goals 
-* Layout
+        -  Returning and Frequent Visitor Goals
+        -  Site Administrator Goals  
+* [Layout](#layout)
 
     - Design
-        -  Colour scheme
-        -  Typography
-        -  Images
+        - Colour scheme
+        - Typography
+        - Images
     - Wireframes
-        - Discrepancy with original ideas
+        - Discrepancy with Original Ideas
         - Links to Wireframes
+* [Features](#features)
+    - Responsivity
+    - Interactive Elements
+    - Features to add in future
 
-++++++ Correct table content ++++++++++
+* [Technologies Used](#technologies-used) 
+    - Languages Used
+    - Frameworks, Libraries and Programs Used  
 
- * Features
-
-* Structure
-  * Wireframes
-  * Discrepancies with original ideas
-  * Colours
-  * Typography
-
-* Technologies
-
-* Testing
-
-* Bugs, Issues
+* [Testing](#testing)
+    - Testing User Stories from User Experience (UX) Section
+    - Further Testing
+    - Known Bugs 
 
 * Deployment
 
 * Acknowledgements
 ## Introduction
+# Introduction
 
 The product Restaurant Booking System is a fictitious restaurant website. 
 Beside being able to view pages like the home page, menu and the contact page, users are also able to create an account, sign in and avail of the table booking feature, which unregistered users don't have access to. Through the booking, users can access all their previous bookings, edit and delete them. Site user administrators have access to all bookings and all create, edit and delete functionalities.
 The site has been designed to be fully responsive on desktop, laptop, tablet and mobile devices.
 
 ## User Experience (UX)
+# UX
 
 -   ### User stories 
 
@@ -75,6 +76,7 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         
 
 ## Layout
+# Layout
 -   ### Design
     -   #### Colour Scheme
         -   The main colours in the website theme for header, background, footer and text labels are brown, yellow, and beige.
@@ -100,6 +102,7 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
 
 
 ## Features
+# Features
 -   ### Responsivity
 
 The application is responsive on all device sizes, thanks to the Boostrap theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized. There is an exception, however: when bookings are displayed in the database table in the view_booking.html, on mobile phone screens in portrait mode there is not enough room for all columns to be shown. However, Bootstrap adds a slide bar so that user can slide the page content from left to right. 
@@ -115,7 +118,11 @@ In mobile phone landscape mode all columns show beside one another, however, the
     -   #### Form input fields on signup, register, signout, table booking, edit booking and delete booking forms
     -   #### Buttons - including form buttons (signup, register, signout, table booking, edit booking and delete booking form buttons) and page buttons (Visit Us button on Home page)
 
+-   ### Features to add in future   
+    -   #### I would like to add a dropdown list for registered users to acess their account-related activites like view bookings, login and logout.
+
 ## Technologies Used
+# Technologies Used
 
 ### Languages Used
 
@@ -150,6 +157,7 @@ In mobile phone landscape mode all columns show beside one another, however, the
     -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
 
 ## Testing
+# Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint compiler to validate the Python files.
 
@@ -196,8 +204,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         Although only two fields are marked with an asterisk, customer cannot submit without filling in all fields. 
         
         
-        [See booking form validation details: ]
-        [Booking form validation](#-booking-form-validation)
+        [See booking form validation details: ](#booking-form-validation)
         
         
         Once customer clicks on Submit booking, they are redirected to a page where bookings are arranged in a table. At the same time a pop up message appears just under the navbar: "Booking successful".
@@ -273,10 +280,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         3. Alternatively, if users do not wish to create a new booking, just would like to view their existing booking details or edit or delete them, they can click on the "My bookings" navbar link, which will be visible for authenticated users after login. This exposes the same page where users get after adding a booking.
         
     3. As a Returning and Frequent visitor I want to like the restaurant services on their website.
-        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as could have)   
+        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as could have). I would like to add this feature in future.
         [Agile User Stories](https://github.com/renatalantos/booking-system/projects/1)
     4. As a Returning and Frequent visitor I want to send messages and queries to the site owner via a form.
-        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as should have)   
+        1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as should have). I would like to add this feature in future.
         [Agile User Stories](https://github.com/renatalantos/booking-system/projects/1)
 
     5. As a Returning and Frequent Visitor, I want to sign out of my account at the end of the session to keep my account safe.
@@ -319,10 +326,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     1. Validations I could imply
         -   1. There is a validation in place where user cannot enter a past or immediate present date (Immediate present date is already the past when user submits the booking form.) There is a validation function in the models.py file, with a validation error raised. In the views.py file in the add_booking function then, when due to the validaton error form is not valid, and cannot be saved, an error pop up message is generated, saying "Booking date must be in the past".
 
-        [Validation function in models.py]() ++++++
+        [Validation function in models.py](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Booking%20cannot%20be%20in%20past.JPG)
 
 
-        [Error message in views.py]() +++++++
+        [Error message in views.py](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Error%20message%20in%20views.JPG)
 
         -   2. User cannot enter a duplicate booking. This is due to the uniqe_together list with its items in the models.py Meta class. User, customer name and reservation date and time cannot be duplicated together, otherwise a 505 error will show, which I customized as a duplicate_booking.html page.
 
@@ -333,9 +340,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     2. Validations I could not imply
         -   1. I wanted phone number to be purely numerical. At the moment it's at the user's discretion whether they enter alphabetical or numerical characters. I tried to use PhoneNumberField and validate regular expressions (with from django.core.validators import RegexValidator). However, the former could be deprecated and when I tried to add a regular expression with a validator, my booking page froze. However, no error message appeared.
-        Due to time restraints, I'm not pursuing a further solution at the moment.
+        Due to time restraints, I'm not pursuing a further solution at the moment. In future I would like to add this validation.
 
-        -   2. I wanted to define an opening time and make sure that user cannot book a reservation outside the opening hours. My approach was to extract the hour and minute from the reservation date and time and compare this to a certain hour and minute combination of the opening and closing time. However, I didn't manage to find a date-time format for opening and closing time where I could have comared them to the reservation date. Due to time restraints, I'm not pursuing a further solution at the moment.
+        -   2. I wanted to define an opening time and make sure that user cannot book a reservation outside the opening hours. My approach was to extract the hour and minute from the reservation date and time and compare this to a certain hour and minute combination of the opening and closing time. However, I didn't manage to find a date-time format for opening and closing time where I could have comared them to the reservation date. Due to time restraints, I'm not pursuing a further solution at the moment. In future I would like to add this validation.
+
         Please find a screenshot below for a validation attempt and the error I was getting:
 
 
@@ -345,7 +353,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         [Error after opening hours validation attempt](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/errors/Validate%20opening%20time.JPG)
 
-    3.  On the booking form, all fields are required, user cannot submit the form without filling in all fields. However, only Customer name and number of customers have an asterisk behind them. I assume the formatting and styling of the form fields is done by the crispy form tags. I noticed that when I changed the model for the form field in models.py, the asterisks were taken away in some cases.
+    3.  On the booking form, all fields are required, user cannot submit the form without filling in all fields. However, only Customer name and number of customers have an asterisk behind them. I assume the formatting and styling of the form fields is done by the crispy form tags. I noticed that when I changed the model for the form field in models.py, the asterisks were taken away in some cases. In future I would like to correct this validation.
 
     [No asterisk on form beside import field yet field is required](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Booking%20form%20no%20asterisk%20yet%20fied%20is%20required.JPG)
 
