@@ -184,7 +184,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         1. Once the first-time user has created an account and been redirected to the home page, they can click on the Book a Table nav link again. This time they will see a hero image with tables and a booking form with the  following form elements:
             - #### Form title "Table Booking Form"
-            - #### A request to the user asking them not to put in a past date
             - #### The following input fields:
                 *   ##### Customer name - takes alphanumerical characters
                 *   ##### Phone number - takes alphanumerical characters
@@ -197,7 +196,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         Although only two fields are marked with an asterisk, customer cannot submit without filling in all fields. 
         
         
-        [Please click on this link for more detail on validation issues and successful validation on the booking form: ]()
+        [See booking form validation details: ]()
         
         
         Once customer clicks on Submit booking, they are redirected to a page where bookings are arranged in a table. At the same time a pop up message appears just under the navbar: "Booking successful".
@@ -224,10 +223,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - #### Submit edited booking button
 
         If user clicks on "Changed my mind, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
-        Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+        Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the success message won't appear. [See validation details]() Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
         
         5. If user decides, that they wish to delete their booking, they must click on the Delete Booking button. The booking will appear on a separate page, with a waste paper basket image, on a form like the table booking form. The form has the following elements:
-        - #### Form title "Are You Sure You Wnt to Delete this Booking?"
+        - #### Form title "Are You Sure You Want to Delete this Booking?"
         - #### Link "No, back to my booking" in case customer has changed their mind
         - #### The following input fields:
             * ##### Customer name - as per user input when creating a booking
@@ -237,7 +236,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - #### Delete booking button
 
         If user clicks on "No, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
-        When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. (See validation details) Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+        When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. [See validation details]() Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
 
         
     5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe. 
@@ -267,7 +266,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     2. As a Returning and Frequent Visitor, I want to create a new table booking, view details of my newly made and previous bookings, and alternatively edit them or delete them.
 
-        1. Users can create a new booking, as per the steps described above, by clicking on the booking form.
+        1. Users can create a new booking, as per the steps described above, by clicking on the booking form, from the Book a Table menu .
         2. After submitting the booking, users can view their newly added or older booking details. Editing and deleting can be done from there.
         3. Alternatively, if users do not wish to create a new booking, just would like to view their existing booking details or edit or delete them, they can click on the "My bookings" navbar link, which will be visible for authenticated users after login. This exposes the same page where users get after adding a booking.
         
@@ -295,21 +294,60 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. They can login here through the standard login form provided.
 
     2. As a Site Administrator I would like to be able to create, view, edit and delete bookings.
-        1. Once the booking object is created in the admin database (after being created in models.py, registered in admins.py and being connected to the database), a site administrator can avail of the inbuilt functionalities in the Django admin site, like adding bookings, viewing all bookings made, editing and deleting bookings. This is fairly straightforward. All booking related changes on the website (front end) like adding, editing and deleting are synchronized with this django admin database and vice versa.
+        1. Once the booking object is created in the admin database (after being created in models.py, registered in admins.py and connection to the database), a site administrator can avail of the inbuilt functionalities in the Django admin site, like adding bookings, viewing all bookings made, editing and deleting bookings. They can do this for themselves and all authenticated users. This is fairly straightforward. All booking related changes on the website on the front end that registered and authenticated users make like adding, editing and deleting are synchronized with the django admin database and vice versa.
         [Django Admin Database Functionalities](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/admin%20page)
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
+-   The Website was tested on Google Chrome, Firefox, Microsoft Edge, Opera and Internet Explorer browsers. The site renders fine in all browsers. In IE the body fonts revert from Lora to Times New Roman.
+-   The website was viewed on a variety of devices such as Desktop, Laptop, Samsung Galaxy A51 and Google Developer Tools. It is responsive on all devices and all features work as expected.
+-   A large amount of testing was done to ensure that all pages were linking correctly. - See Testing User Stories
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ### Known Bugs
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
+-   #### In general
+    1. In the Gitpod Development Environment the site works with full CSS styling by now when Debug is off in the settings.py file. However, the admin page (/admin) comes up without CSS styling.
+
+    [No CSS for site admin page]()
+    
+    When Debug is on in the development environment, the admin site has full CSS styling.
+
+-   #### Booking form related validation issues
+    1. Validations I could imply
+        -   1. There is a validation in place where user cannot enter a past or immediate present date (Immediate present date is already the past when user submits the booking form.) There is a validation function in the models.py file, with a validation error raised. In the views.py file in the add_booking function then, when due to the validaton error form is not valid, and cannot be saved, an error pop up message is generated, saying "Booking date must be in the past".
+
+        [Validation function in models.py]() 
+        [Error message in views.py]()
+
+        -   2. User cannot enter a duplicate booking. This is due to the uniqe_together list with its items in the models.py Meta class. User, customer name and reservation date and time cannot be duplicated together, otherwise a 505 error will show, which I customized as a duplicate_booking.html page.
+
+        [Must be unique]()
+
+
+        [Customized 505 error]()
+
+    2. Validations I could not imply
+        -   1. I wanted phone number to be purely numerical. At the moment it's at the user's discretion whether they enter alphabetical or numerical characters. I tried to use PhoneNumberField and validate regular expressions (with from django.core.validators import RegexValidator). However, the former could be deprecated and when I tried to add a regular expression with a validator, my booking page froze. However, no error message appeared.
+        Due to time restraints, I'm not pursuing a further solution at the moment.
+
+        -   2. I wanted to define an opening time and make sure that user cannot book a reservation outside the opening hours. My approach was to extract the hour and minute from the reservation date and time and compare this to a certain hour and minute combination of the opening and closing time. However, I didn't manage to find a date-time format for opening and closing time where I could have comared them to the reservation date. Due to time restraints, I'm not pursuing a further solution at the moment.
+        Please find a screenshot below for a validation attempt and the error I was getting:
+
+
+        
+        [Validation attempt for opening hours]()
+
+
+        [Error after opening hours validation attempt]()
+
+    3.  On the booking form, all fields are required, user cannot submit the form without filling in all fields. However, only Customer name and number of customers have an asterisk behind them. I assume the formatting and styling of the form fields is done by the crispy form tags. I noticed that when I changed the model for the form field in models.py, the asterisks were taken away in some cases.
+
+    [No asterisk on form beside import field yet field is required]()
+
+
+
+
 
 ## Deployment
 

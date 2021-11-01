@@ -71,6 +71,8 @@ def add_booking(request):
             booking.save()
             messages.success(request, 'Booking successful.')
             return redirect('view_booking')
+        else:
+            messages.error(request, 'Booking date must be in the future.')
     form = BookingForm()
     context = {
         'form': form
