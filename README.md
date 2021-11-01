@@ -177,7 +177,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. The login page sign in form contains a link where user can create an account from: "If you have not created an account yet, then please sign up to make reservations." This way users can understand that all booking functionalities are only accessed for registered users.
         3. Alternatively, the user might want to create an account from the navbar link "Register", which will take them straight to the signup form. 
         4. Once the user signs up by creating a username, optionally adding an email address, creating and repeating the password, they are redirected to the home page. 
-        5. In the navbar now, the Login and Register navbar links have disappeared, Logout and Logged in as (Created username) appear instead.
+        5. In the navbar now, the Login and Register navbar links have disappeared, My Bookings, Logout and Logged in as (Created username) appear instead.
     
     4. As a First Time Visitor, I want to create a table booking, view booking details, and learn what changes I can make on created bookings.
 
@@ -267,9 +267,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     2. As a Returning and Frequent Visitor, I want to create a new table booking, view details of my newly made and previous bookings, and alternatively edit them or delete them.
 
-        1. In order to access the bookings table, users need to create a new booking, as these are not stored separately 
-        in e.g. account details.
-        2. Therefore, returning users are required to follow the steps described above for adding, viewing, editing and deleting bookings for First Time Visitors.
+        1. Users can create a new booking, as per the steps described above, by clicking on the booking form.
+        2. After submitting the booking, users can view their newly added or older booking details. Editing and deleting can be done from there.
+        3. Alternatively, if users do not wish to create a new booking, just would like to view their existing booking details or edit or delete them, they can click on the "My bookings" navbar link, which will be visible for authenticated users after login. This exposes the same page where users get after adding a booking.
         
     3. As a Returning and Frequent visitor I want to like the restaurant services on their website.
         1. Currently this feature is outside of this project's scope as was labelled as a non-immediate requirement in the Agile user stories (labelled as could have)   
