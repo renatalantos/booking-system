@@ -398,24 +398,30 @@ This attached Heroku Postgres to my project in Heroku.
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+-   The structure and the code of the project was mainly based on two project walkthroughs by Code Institute:
+    - * Hello Django - I created CRUD functionalities based on this walkthrough.
+    - * I think therefore I blog - I created authentication and messages functionalities based on this walkthrough and followed the deployment steps described here. 
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   [Bootstrap5 Template](https://startbootstrap.com/theme/business-casual): Bootstrap Theme used throughout the project  to style pages and make site responsive.
 
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+-   [Official Django Documentation](https://docs.djangoproject.com/en/3.2/) was researched for syntax, code expressions, code functionalities.
+
+-   Stack Overflow was was researched for syntax, code expressions, code functionalities, problem solving. Validation function for reservation date and time is from there.
+
+-   How to implement widgets for form fields was answered by tutor on FullStack Slack channel.
+
 
 ### Content
 
--   All content was written by the developer.
+-   Content comes from the Bootstrap template, I made slight changes to the prewritten content there. Food descriptions in Menu page come partly from the Burger Joint web page and various recipe websites. 
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
 ### Media
 
--   All Images were created by the developer.
-
+-   Images are from pexels.com and from the Bootstrap template.
 ### Acknowledgements
 
--   My Mentor for continuous helpful feedback.
-
--   Tutor support at Code Institute for their support.
+-   My Mentor Rohit for continuous helpful feedback.
+-   Kasia for supporting all of us in all circumstances and for being available for individual support.
+-   My classmates for their ongoing support and solidarity.
+-   My family for their patience. Thanks for putting up with me in these intense times.
