@@ -36,19 +36,19 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 * [Testing](#testing)
     - Testing User Stories from User Experience (UX) Section
     - Further Testing
-    - Known Bugs 
+    - Unresolved Bugs 
 
-* Deployment
+* [Deployment](#deployment)
 
-* Acknowledgements
-## Introduction
+* [Credits](#credits)
+
 # Introduction
 
 The product Restaurant Booking System is a fictitious restaurant website. 
 Beside being able to view pages like the home page, menu and the contact page, users are also able to create an account, sign in and avail of the table booking feature, which unregistered users don't have access to. Through the booking, users can access all their previous bookings, edit and delete them. Site user administrators have access to all bookings and all create, edit and delete functionalities.
 The site has been designed to be fully responsive on desktop, laptop, tablet and mobile devices.
 
-## User Experience (UX)
+
 # UX
 
 -   ### User stories 
@@ -74,8 +74,6 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         1. As a Site Administrator I would like to be able to create, view, edit and delete bookings.    
         
         
-
-## Layout
 # Layout
 -   ### Design
     -   #### Colour Scheme
@@ -101,8 +99,9 @@ The site has been designed to be fully responsive on desktop, laptop, tablet and
         -   Register Page Wireframe -[View](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/Register%20Page%20Wireframe.pdf)
 
 
-## Features
+
 # Features
+
 -   ### Responsivity
 
 The application is responsive on all device sizes, thanks to the Boostrap theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized. There is an exception, however: when bookings are displayed in the database table in the view_booking.html, on mobile phone screens in portrait mode there is not enough room for all columns to be shown. However, Bootstrap adds a slide bar so that user can slide the page content from left to right. 
@@ -156,7 +155,6 @@ In mobile phone landscape mode all columns show beside one another, however, the
 1. [Heroku:](https://www.heroku.com/)
     -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
 
-## Testing
 # Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project to ensure there were no syntax errors in the project. I used the inbuilt pylint compiler to validate the Python files.
@@ -204,7 +202,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         Although only two fields are marked with an asterisk, customer cannot submit without filling in all fields. 
         
         
-        [See booking form validation details: ](#booking-form-validation)
+        [Go to booking form validation section from this link to see all issues](#booking-form-validation)
         
         
         Once customer clicks on Submit booking, they are redirected to a page where bookings are arranged in a table. At the same time a pop up message appears just under the navbar: "Booking successful".
@@ -313,7 +311,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   A large amount of testing was done to ensure that all pages were linking correctly. - See Testing User Stories
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
-### Known Bugs
+### Unresolved Bugs
 
 -   #### In general
     1. In the Gitpod Development Environment the site works with full CSS styling by now when Debug is off in the settings.py file. However, the admin page (/admin) comes up without CSS styling.
@@ -359,57 +357,44 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 
 
+# Deployment
 
+### Heroku
 
-## Deployment
+The project was created in Github first and then transferred to the Gitpod development environment by the use of the green Gitpod button.
 
-### GitHub Pages
+## Initial Deployment  
+- ### When creating a Django project, it is highly advisable to deploy early, due to the compexities of the development process and the actual application.
 
-The project was deployed to GitHub Pages using the following steps...
+1. In the Gitpod environment a skeleton django project was created (project, app and included files).
+2. A Heroku app was created in Heroku.
+3. In Heroku, under the Resources tab, in Add-ons, I searched for Postgres. When found I submitted a request to use it. 
+This attached Heroku Postgres to my project in Heroku.
+4. In the Heroku Settings tab I clicked on "Reveal Config Vars" and copied the automatically added postgres link from beside the DATABASE_URL variable. 
+5. In Gitpod dev environment, I looked for the env.py file that was automatially generated from the CI template at the beginning. This file stores environment variables.
+6. After importing the os into the env.py file, I added the database URL from Heroku into env.py.
+7. I added a secret key in the env.py file after having it generated on the [Django Secret Key Generator - MiniWebtool](https://miniwebtool.com/django-secret-key-generator/) website.
+8. I added the secret key into the Heroku Settings > config vars as well.
+9. In the settings.py file in Gitpod I imported os and added an if statement saying that outside the development environment the environment variables must be used from env.py, including the secret key.
+10. Still in the settings.py file, I commented out the present code for databases and added code to use the currently set up django database URL as set in the env.py file and also in the Heroku config vars.
+11. I migrated these changes in Gitpod using python3 manage.py migrate
+12. To get static and media sites stored on Cloudinary, I went to the dashboard of my previously created Cloudinary account and copied the API Environment Variable.
+13. I added this to the Gitpod env.py file and into the Heroku Settings > config vars. 
+14. I also added DISABLE_COLLECTATIC = 1 to the Heroku config vars. 
+15. I added cloudinary and cloudinary_storage to the installed apps in settings.py. 
+16. I set up the static file storage, static file directory, the static root, the media url, the default file storage and the templates directory in settings.py.
+17. I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in settings.py, followed by a comma and 'localhost' (to allow running in the development environment).
+18. I created 3 directories at the top level: media, static, templates.
+19. I created a Procfile at the top level directory. 
+20. I did a git add, git commit and git push.
+21. In the Deployment tab in Heroku, in Deployment method, I added Github, set up Enable Automated Deployment, looked for my Github repository, connected my Heroku app to it and clicked on Deploy Branch at the bottom of the page.
+22. When I opened the app after the app was built and deployed, I saw the success message page with a rocket.
+23. After  my application was built, as the first step of the final deployment I turned Debug to False in the settings.py file in Gitpod.
+24. In Heroku I removed the DISABLE_COLLECTSTATIC variable.
+25. I saved my changes on all my files and performed a git add, git commit and git push.
+26. As automatic depoyment had been enabled in Heroku, I waited until my app was built, then I opened it and made sure that all functionalities work.
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
-## Credits
+# Credits
 
 ### Code
 
