@@ -45,7 +45,7 @@ This is the main marketing website for the fictitious website, Renata's Restaura
 # Introduction
 
 The product Restaurant Booking System is a fictitious restaurant website. 
-Beside being able to view pages like the home page, menu and the contact page, users are also able to create an account, sign in and avail of the table booking feature, which unregistered users don't have access to. Through the booking, users can access all their previous bookings, edit and delete them. Site user administrators have access to all bookings and all create, edit and delete functionalities.
+Beside being able to view pages like the home page, menu and the contact page, users are also able to create an account, sign in, avail of the table booking feature and view bookings, which unregistered users don't have access to. Through the booking and the view booking navbar link users can access all their previous bookings, edit and delete them. Site user administrators have access to all bookings and all create, edit and delete functionalities.
 The site has been designed to be fully responsive on desktop, laptop, tablet and mobile devices.
 
 
@@ -113,7 +113,7 @@ In mobile phone landscape mode all columns show beside one another, however, the
 [View database table in landscape mode on smallest mobile device](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/site%20features/Booking%20table%20landscape.JPG)
 
 -   ### Interactive elements
-    -   #### Nav links for Home, Menu, Book a Table, Contact Us, Register, Login and Logout pages
+    -   #### Nav links for Home, Menu, Book a Table, Contact Us, My bookings, Register, Login and Logout pages
     -   #### Form input fields on signup, register, signout, table booking, edit booking and delete booking forms
     -   #### Buttons - including form buttons (signup, register, signout, table booking, edit booking and delete booking form buttons) and page buttons (Visit Us button on Home page)
 
@@ -139,7 +139,9 @@ In mobile phone landscape mode all columns show beside one another, however, the
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript. It is also used for the Bootstrap Tempus Dominus datetime picker and to define visibility duration for popup messages that signal successful completion of different form related activities.
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript. It is also used for the Bootstrap Tempus Dominus datetime picker.
+1. [Javascript:](https://en.wikipedia.org/wiki/JavaScript)  
+    - Javascript was used to define visibility duration for popup messages that signal successful completion of different form related activities.
 1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -149,7 +151,7 @@ In mobile phone landscape mode all columns show beside one another, however, the
 1. [Lucidchart:](https://www.lucidchart.com/)
     - Lucidchart was used to create the data model of the project . [View Booking data model](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/wireframes/1%20model%20only%20with%20Booking.JPG)   
 1. [SQLite3 database:](https://en.wikipedia.org/wiki/SQLite)
-    - SQLite3 is Django's default database system
+    - SQLite3 is Django's default database system.
 1. [Cloudinary:](https://cloudinary.com/)
     - I used cloudinary for cloud-based storage and partly for linking of my website images.
 1. [Heroku:](https://www.heroku.com/)
@@ -321,7 +323,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     When Debug is on in the development environment, the admin site has full CSS styling.
     # Booking form validation
 -   #### Booking form related validation issues
-    1. Validations I could imply
+    1. Validations I could implement
         -   1. There is a validation in place where user cannot enter a past or immediate present date (Immediate present date is already the past when user submits the booking form.) There is a validation function in the models.py file, with a validation error raised. In the views.py file in the add_booking function then, when due to the validaton error form is not valid, and cannot be saved, an error pop up message is generated, saying "Booking date must be in the past".
 
         [Validation function in models.py](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Booking%20cannot%20be%20in%20past.JPG)
@@ -336,11 +338,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         [Customized 505 error](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Duplicate%20booking%20customized%20page.JPG)
 
-    2. Validations I could not imply
+    2. Validations I could not implement
         -   1. I wanted phone number to be purely numerical. At the moment it's at the user's discretion whether they enter alphabetical or numerical characters. I tried to use PhoneNumberField and validate regular expressions (with from django.core.validators import RegexValidator). However, the former could be deprecated and when I tried to add a regular expression with a validator, my booking page froze. However, no error message appeared.
         Due to time restraints, I'm not pursuing a further solution at the moment. In future I would like to add this validation.
 
-        -   2. I wanted to define an opening time and make sure that user cannot book a reservation outside the opening hours. My approach was to extract the hour and minute from the reservation date and time and compare this to a certain hour and minute combination of the opening and closing time. However, I didn't manage to find a date-time format for opening and closing time where I could have comared them to the reservation date. Due to time restraints, I'm not pursuing a further solution at the moment. In future I would like to add this validation.
+        -   2. I wanted to define an opening time and make sure that user cannot book a reservation outside the opening hours. My approach was to extract the hour and minute from the reservation date and time and compare this to a certain hour and minute combination of the opening and closing time. However, I didn't manage to find a date-time format for opening and closing time where I could have compared them to the reservation date. Due to time restraints, I'm not pursuing a further solution at the moment. In future I would like to add this problem.
 
         Please find a screenshot below for a validation attempt and the error I was getting:
 
@@ -366,7 +368,7 @@ The project was created in Github first and then transferred to the Gitpod devel
 ## Initial Deployment  
 - ### When creating a Django project, it is highly advisable to deploy early, due to the compexities of the development process and the actual application.
 
-1. In the Gitpod environment a skeleton django project was created (project, app and included files).
+1. In the Gitpod environment a skeleton django project was created (project, app and relating files).
 2. A Heroku app was created in Heroku.
 3. In Heroku, under the Resources tab, in Add-ons, I searched for Postgres. When found I submitted a request to use it. 
 This attached Heroku Postgres to my project in Heroku.
@@ -399,8 +401,8 @@ This attached Heroku Postgres to my project in Heroku.
 ### Code
 
 -   The structure and the code of the project was mainly based on two project walkthroughs by Code Institute:
-    - * Hello Django - I created CRUD functionalities based on this walkthrough.
-    - * I think therefore I blog - I created authentication and messages functionalities based on this walkthrough and followed the deployment steps described here. 
+    * Hello Django - I created CRUD functionalities based on this walkthrough.
+    * I think therefore I blog - I created authentication and messages functionalities based on this walkthrough and followed the deployment steps described here. 
 
 -   [Bootstrap5 Template](https://startbootstrap.com/theme/business-casual): Bootstrap Theme used throughout the project  to style pages and make site responsive.
 
