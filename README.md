@@ -196,7 +196,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         Although only two fields are marked with an asterisk, customer cannot submit without filling in all fields. 
         
         
-        [See booking form validation details: ]()
+        [See booking form validation details: ]
+        [Booking form validation](#-booking-form-validation)
         
         
         Once customer clicks on Submit booking, they are redirected to a page where bookings are arranged in a table. At the same time a pop up message appears just under the navbar: "Booking successful".
@@ -223,7 +224,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - #### Submit edited booking button
 
         If user clicks on "Changed my mind, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
-        Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the success message won't appear. [See validation details]() Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+        Whether user edits their booking details on the form or leave them unedited on the form and click on the "Submit edited booking" button, they are taken back to the previous page, to the table with all booking details. Additionally, user sees the following popup message "Your booking has been updated". If user enters a date in the past, the form won't update and the error message "Booking date must be in the future" appears. 
+        Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
         
         5. If user decides, that they wish to delete their booking, they must click on the Delete Booking button. The booking will appear on a separate page, with a waste paper basket image, on a form like the table booking form. The form has the following elements:
         - #### Form title "Are You Sure You Want to Delete this Booking?"
@@ -236,7 +238,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         - #### Delete booking button
 
         If user clicks on "No, back to my booking" link, they are taken back to the previous page, to the table with all booking details.
-        When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. [See validation details]() Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
+        When user clicks on the "Delete booking" button, they are taken back to the previous page, to the table with all booking details, without the deleted booking details. Additionally, user sees the following popup message "Your booking has been deleted". If customer deletes a booking where a date in the past now, the success message won't appear. Customer can then go onto any page after as per navbar links, which are displayed straight above the bookings table.
 
         
     5. As a First Time Visitor, I want to sign out of my user account at the end of the session to keep my account related details safe. 
@@ -309,23 +311,25 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### In general
     1. In the Gitpod Development Environment the site works with full CSS styling by now when Debug is off in the settings.py file. However, the admin page (/admin) comes up without CSS styling.
 
-    [No CSS for site admin page]()
+    [No CSS for site admin page](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/admin%20page/Site%20admin%20no%20css.JPG)
     
     When Debug is on in the development environment, the admin site has full CSS styling.
-
+    # Booking form validation
 -   #### Booking form related validation issues
     1. Validations I could imply
         -   1. There is a validation in place where user cannot enter a past or immediate present date (Immediate present date is already the past when user submits the booking form.) There is a validation function in the models.py file, with a validation error raised. In the views.py file in the add_booking function then, when due to the validaton error form is not valid, and cannot be saved, an error pop up message is generated, saying "Booking date must be in the past".
 
-        [Validation function in models.py]() 
-        [Error message in views.py]()
+        [Validation function in models.py]() ++++++
+
+
+        [Error message in views.py]() +++++++
 
         -   2. User cannot enter a duplicate booking. This is due to the uniqe_together list with its items in the models.py Meta class. User, customer name and reservation date and time cannot be duplicated together, otherwise a 505 error will show, which I customized as a duplicate_booking.html page.
 
-        [Must be unique]()
+        [Must be unique](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/unique_together.JPG)
 
 
-        [Customized 505 error]()
+        [Customized 505 error](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Duplicate%20booking%20customized%20page.JPG)
 
     2. Validations I could not imply
         -   1. I wanted phone number to be purely numerical. At the moment it's at the user's discretion whether they enter alphabetical or numerical characters. I tried to use PhoneNumberField and validate regular expressions (with from django.core.validators import RegexValidator). However, the former could be deprecated and when I tried to add a regular expression with a validator, my booking page froze. However, no error message appeared.
@@ -336,14 +340,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 
         
-        [Validation attempt for opening hours]()
+        [Validation attempt for opening hours](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/errors/Validate%20opening%20time%20error.JPG)
 
 
-        [Error after opening hours validation attempt]()
+        [Error after opening hours validation attempt](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/errors/Validate%20opening%20time.JPG)
 
     3.  On the booking form, all fields are required, user cannot submit the form without filling in all fields. However, only Customer name and number of customers have an asterisk behind them. I assume the formatting and styling of the form fields is done by the crispy form tags. I noticed that when I changed the model for the form field in models.py, the asterisks were taken away in some cases.
 
-    [No asterisk on form beside import field yet field is required]()
+    [No asterisk on form beside import field yet field is required](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/dilemmas/Booking%20form%20no%20asterisk%20yet%20fied%20is%20required.JPG)
 
 
 
